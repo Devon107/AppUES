@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import sv.edu.ues.uesrrii.clases.Pregunta;
-import sv.edu.ues.uesrrii.clases.LlenadoPreguntas;
 
 public class PrincipalActivity extends AppCompatActivity {
 
@@ -24,15 +23,10 @@ public class PrincipalActivity extends AppCompatActivity {
     }
 
     public void prueba1(View v){
-        TextView tw = (TextView) findViewById(R.id.pregunta);
+        TextView tw = findViewById(R.id.btnEconomia);
         List<Pregunta> p = new ArrayList<>();
 
-        p = LlenadoPreguntas.preguntasEconomiaInternacional();
-
-        for(Pregunta pp : p){
-            tw.setText(pp.getEnunciado());
-
-        }
+        
 
     }
 }

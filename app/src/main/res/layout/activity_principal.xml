@@ -29,6 +29,7 @@
         app:layout_constraintVertical_bias="0.085" />
 
     <Button
+        android:id="@+id/btnEconomia"
         android:layout_width="146dp"
         android:layout_height="35dp"
         android:text="@string/materia1"
@@ -41,9 +42,10 @@
         app:layout_constraintVertical_bias="0.146" />
 
     <Button
+        android:id="@+id/btnCooperacion"
         android:layout_width="146dp"
         android:layout_height="35dp"
-        android:text="@string/materia2"
+        android:text="@string/materia3"
         android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.768"
@@ -53,9 +55,10 @@
         app:layout_constraintVertical_bias="0.327" />
 
     <Button
+        android:id="@+id/btnTeoRRII"
         android:layout_width="146dp"
         android:layout_height="35dp"
-        android:text="@string/materia3"
+        android:text="@string/materia2"
         android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.768"

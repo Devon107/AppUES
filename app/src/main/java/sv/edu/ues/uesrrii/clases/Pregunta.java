@@ -5,49 +5,38 @@ package sv.edu.ues.uesrrii.clases;
  */
 
 public class Pregunta {
-    private String Enunciado = "";
-    private String[] Preguntas = new String[4];
-    private int IndexRespuesta = 0;
-    private String Materia;
+    private String idPregunta;
+    private String enunciadoPregunta = "";
+    private String idMateria;
 
-    public String getEnunciado() {
-        return Enunciado;
+    public Pregunta(String idPregunta, String enunciadoPregunta, String idMateria) {
+        this.idPregunta = idPregunta;
+        this.enunciadoPregunta = enunciadoPregunta;
+        this.idMateria = idMateria;
     }
 
-    public void setEnunciado(String enunciado) {
-        Enunciado = enunciado;
+    public String getIdPregunta() {
+
+        return idPregunta;
     }
 
-    public String getMateria() {
-        return Materia;
+    public void setIdPregunta(String idPregunta) {
+        this.idPregunta = idPregunta;
     }
 
-    public void setMateria(String materia) {
-        Materia = materia;
+    public String getEnunciadoPregunta() {
+        return enunciadoPregunta;
     }
 
-    public int getIndexRespuesta() {
-
-        return IndexRespuesta;
+    public void setEnunciadoPregunta(String enunciadoPregunta) {
+        this.enunciadoPregunta = enunciadoPregunta;
     }
 
-    public void setIndexRespuesta(int indexRespuesta) {
-        IndexRespuesta = indexRespuesta;
+    public String getIdMateria() {
+        return idMateria;
     }
 
-    public String[] getPreguntas() {
-
-        return Preguntas;
-    }
-
-    public void setPreguntas(String[] preguntas) {
-        Preguntas = preguntas;
-    }
-
-    public Pregunta(String enunciado, String[] preguntas, int indexres, String mat) {
-        this.Enunciado = enunciado;
-        this.Preguntas = preguntas;
-        this.IndexRespuesta = indexres;
-        this.Materia = mat;
+    public void setIdMateria(String idMateria) {
+        this.idMateria = idMateria;
     }
 }
