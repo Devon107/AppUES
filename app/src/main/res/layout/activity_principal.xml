@@ -70,7 +70,7 @@
     <ImageView
         android:layout_width="121dp"
         android:layout_height="147dp"
-        android:src="@drawable/Logo"
+        android:src="@drawable/logo"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp" />

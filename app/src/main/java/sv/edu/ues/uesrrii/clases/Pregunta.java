@@ -1,5 +1,7 @@
 package sv.edu.ues.uesrrii.clases;
 
+import java.util.List;
+
 /**
  * Created by jasso on 14/04/2018.
  */
@@ -8,6 +10,15 @@ public class Pregunta {
     private String idPregunta;
     private String enunciadoPregunta = "";
     private String idMateria;
+    private List<Respuesta> respuestas;
+
+    public List<Respuesta> getRespuestas() {
+        return respuestas;
+    }
+
+    public void setRespuestas(List<Respuesta> respuestas) {
+        this.respuestas = respuestas;
+    }
 
     public Pregunta(String idPregunta, String enunciadoPregunta, String idMateria) {
         this.idPregunta = idPregunta;
