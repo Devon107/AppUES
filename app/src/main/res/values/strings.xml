@@ -1,6 +1,13 @@
 <resources>
-    <string name="app_name">UES RR II</string>
-    <string name="materia1">Economia Internacional</string>
-    <string name="materia2">Teoria de las relaciones internacionales</string>
-    <string name="materia3">Cooperacion internacional</string>
+    <string name="app_name">UES APP RR</string>
+    <string name="menuButton">Mostrar materias</string>
+    <string name="materia1">Materia 1</string>
+    <string name="materia2">Materia 2</string>
+    <string name="materia3">Materia 3</string>
+    <string name="action_settings">settings</string>
+    <string name="menumaterias1"><b>Relaciones Internacionales</b></string>
+    <string name="descripcion">Lorem ipsum dolor sit amet, no essent aperiam singulis nam.
+        Sed cu mandamus dissentias. Assum inermis fuisset usu ut, alii legimus duo an, mazim regione vis te.
+        Cum eius aliquando suscipiantur no, ex sit accumsan perpetua, percipit adolescens ei qui.
+        Appareat intellegat ut usu, ne prima accumsan mea.</string>
 </resources>

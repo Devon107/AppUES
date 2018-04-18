@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:text="@string/menumaterias1"
+        android:textColor="@color/textMateriasColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <TabHost
+        android:id="@+id/Tabs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.092">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:id="@+id/Año1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ciclo 1"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia1"
+                        android:background="@color/menuButton"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia2"
+                        android:background="@color/menuButton"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia3"
+                        android:background="@color/menuButton"
+                        android:layout_marginTop="@dimen/tab_element"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ciclo 2"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia1"
+                        android:background="@color/menuButton1"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia2"
+                        android:background="@color/menuButton1"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia3"
+                        android:background="@color/menuButton1"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Año2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ciclo 3"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia1"
+                        android:background="@color/menuButton"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia2"
+                        android:background="@color/menuButton"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia3"
+                        android:background="@color/menuButton"
+                        android:layout_marginTop="@dimen/tab_element"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ciclo 4"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia1"
+                        android:background="@color/menuButton1"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia2"
+                        android:background="@color/menuButton1"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia3"
+                        android:background="@color/menuButton1"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Año3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ciclo 5"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia1"
+                        android:background="@color/menuButton"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia2"
+                        android:background="@color/menuButton"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia3"
+                        android:background="@color/menuButton"
+                        android:layout_marginTop="@dimen/tab_element"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ciclo 6"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia1"
+                        android:background="@color/menuButton1"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia2"
+                        android:background="@color/menuButton1"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia3"
+                        android:background="@color/menuButton1"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Año4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ciclo 7"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia1"
+                        android:background="@color/menuButton"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia2"
+                        android:background="@color/menuButton"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia3"
+                        android:background="@color/menuButton"
+                        android:layout_marginTop="@dimen/tab_element"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ciclo 8"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia1"
+                        android:background="@color/menuButton1"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia2"
+                        android:background="@color/menuButton1"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia3"
+                        android:background="@color/menuButton1"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Año5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ciclo 9"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia1"
+                        android:background="@color/menuButton"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia2"
+                        android:background="@color/menuButton"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia3"
+                        android:background="@color/menuButton"
+                        android:layout_marginTop="@dimen/tab_element"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ciclo 10"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia1"
+                        android:background="@color/menuButton1"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia2"
+                        android:background="@color/menuButton1"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/materia3"
+                        android:background="@color/menuButton1"
+                        android:layout_marginTop="@dimen/tab_element"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</android.support.constraint.ConstraintLayout>
