@@ -55,13 +55,15 @@
                         android:text="Ciclo 1"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="@dimen/tab_element"/>
+
                     <Button
+                        android:id="@+id/btn1"
                         android:layout_width="wrap_content"
                         android:layout_height="38dp"
                         android:layout_gravity="center_horizontal"
-                        android:text="@string/materia1"
+                        android:layout_marginTop="@dimen/tab_element"
                         android:background="@color/menuButton"
-                        android:layout_marginTop="@dimen/tab_element"/>
+                        android:text="@string/materia1" />
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="38dp"

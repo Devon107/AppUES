@@ -1,25 +1,26 @@
 package sv.edu.ues.uesrrii.clases;
 
 public class Respuesta {
-    private String idRespuesta;
+    private String registro;
     private String enunciadoRespuesta;
     private String idPregunta;
-    private boolean rCorrecta;
+    private String correcto;
+    private String fechaModificacion;
 
-    public Respuesta(String idRespuesta, String enunciadoRespuesta, String idPregunta, boolean rCorrecta) {
-        this.idRespuesta = idRespuesta;
+    public Respuesta(String registro, String enunciadoRespuesta, String idPregunta, String correcto, String fechaModificacion) {
+        this.registro = registro;
         this.enunciadoRespuesta = enunciadoRespuesta;
         this.idPregunta = idPregunta;
-        this.rCorrecta = rCorrecta;
+        this.correcto = correcto;
+        this.fechaModificacion = fechaModificacion;
     }
 
-    public String getIdRespuesta() {
-
-        return idRespuesta;
+    public String getRegistro() {
+        return registro;
     }
 
-    public void setIdRespuesta(String idRespuesta) {
-        this.idRespuesta = idRespuesta;
+    public void setRegistro(String registro) {
+        this.registro = registro;
     }
 
     public String getEnunciadoRespuesta() {
@@ -38,11 +39,19 @@ public class Respuesta {
         this.idPregunta = idPregunta;
     }
 
-    public boolean isrCorrecta() {
-        return rCorrecta;
+    public String getCorrecto() {
+        return correcto;
     }
 
-    public void setrCorrecta(boolean rCorrecta) {
-        this.rCorrecta = rCorrecta;
+    public void setCorrecto(String correcto) {
+        this.correcto = correcto;
+    }
+
+    public String getFechaModificacion() {
+        return fechaModificacion;
+    }
+
+    public void setFechaModificacion(String fechaModificacion) {
+        this.fechaModificacion = fechaModificacion;
     }
 }

@@ -7,27 +7,22 @@ import java.util.List;
  */
 
 public class Pregunta {
+    private String registro;
     private String idPregunta;
-    private String enunciadoPregunta = "";
+    private String enunciadoPregunta;
     private String idMateria;
-    private List<Respuesta> respuestas;
+    private String fechaModificacion;
+    private List<Respuesta> respuestas = null;
 
-    public List<Respuesta> getRespuestas() {
-        return respuestas;
+    public String getRegistro() {
+        return registro;
     }
 
-    public void setRespuestas(List<Respuesta> respuestas) {
-        this.respuestas = respuestas;
-    }
-
-    public Pregunta(String idPregunta, String enunciadoPregunta, String idMateria) {
-        this.idPregunta = idPregunta;
-        this.enunciadoPregunta = enunciadoPregunta;
-        this.idMateria = idMateria;
+    public void setRegistro(String registro) {
+        this.registro = registro;
     }
 
     public String getIdPregunta() {
-
         return idPregunta;
     }
 
@@ -49,5 +44,30 @@ public class Pregunta {
 
     public void setIdMateria(String idMateria) {
         this.idMateria = idMateria;
+    }
+
+    public String getFechaModificacion() {
+        return fechaModificacion;
+    }
+
+    public void setFechaModificacion(String fechaModificacion) {
+        this.fechaModificacion = fechaModificacion;
+    }
+
+    public List<Respuesta> getRespuestas() {
+        return respuestas;
+    }
+
+    public void setRespuestas(List<Respuesta> respuestas) {
+        this.respuestas = respuestas;
+    }
+
+    public Pregunta(String registro, String idPregunta, String enunciadoPregunta, String idMateria, String fechaModificacion, List<Respuesta> respuestas) {
+        this.registro = registro;
+        this.idPregunta = idPregunta;
+        this.enunciadoPregunta = enunciadoPregunta;
+        this.idMateria = idMateria;
+        this.fechaModificacion = fechaModificacion;
+        this.respuestas = respuestas;
     }
 }
