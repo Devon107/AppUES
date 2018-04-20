@@ -1,7 +1,10 @@
 package sv.edu.ues.uesrrii;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TabHost;
 
 public class MateriasActivity extends AppCompatActivity {
@@ -39,5 +42,15 @@ public class MateriasActivity extends AppCompatActivity {
         TbH.addTab(tab3);
         TbH.addTab(tab4);
         TbH.addTab(tab5);
+
+        Button btn = (Button) findViewById(R.id.btn1);
+        btn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent Cuestionario = new Intent(getApplicationContext(), CuestionarioActivity.class);
+                startActivity(Cuestionario);
+            }
+        });
     }
 }
