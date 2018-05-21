@@ -28,11 +28,45 @@ public class CuestionarioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cuestionario);
 
+//        final String url = "http://10.0.2.2/webservices/";
+//
+//        Retrofit retrofit = new Retrofit.Builder().baseUrl(url).addConverterFactory(GsonConverterFactory.create()).build();
+//
+//        Services service = retrofit.create(Services.class);
+//
+//        Call<List<Pregunta>> call = service.getPreguntasPOST();
+//        call.enqueue(new Callback<List<Pregunta>>() {
+//            @Override
+//            public void onResponse(Call<List<Pregunta>> call, Response<List<Pregunta>> response) {
+//
+//                for (Pregunta p : response.body()) {
+//                    Log.e("Pregunta: ", p.getIdPregunta() + " " + p.getEnunciadoPregunta());
+//                }
+//
+//            }
+//
+//            @Override
+//            public void onFailure(Call<List<Pregunta>> call, Throwable t) {
+//                Log.e("Error", t.toString() );
+//            }
+//        });
         new Peticion().execute();
 
 
+
+
+
+
+
+//
+
     }
 
+    public void prueba1(View v) {
+
+//        new Peticion().execute();
+
+    }
 
     public static class Peticion extends AsyncTask<Void, Void, Void> {
 
