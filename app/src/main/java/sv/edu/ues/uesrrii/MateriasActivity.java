@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TabHost;
 
 public class MateriasActivity extends AppCompatActivity {
+    String[] id_materias = {"EIN", "TRI", "CIN"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,15 +43,12 @@ public class MateriasActivity extends AppCompatActivity {
         TbH.addTab(tab3);
         TbH.addTab(tab4);
         TbH.addTab(tab5);
+    }
 
-        Button btn = (Button) findViewById(R.id.btn1);
-        btn.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent Cuestionario = new Intent(getApplicationContext(), CuestionarioActivity.class);
-                startActivity(Cuestionario);
-            }
-        });
+    public void OpenActivities(View v){
+        Intent Cuestionario = new Intent(getApplicationContext(), CuestionarioActivity.class);
+        String id = v.getResources().getResourceEntryName(v.getId());
+        Cuestionario.putExtra("ID_MATERIA", id);
+        startActivity(Cuestionario);
     }
 }
