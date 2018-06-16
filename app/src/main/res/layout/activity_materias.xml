@@ -66,27 +66,34 @@
                         android:layout_marginTop="@dimen/tab_element"/>
 
                     <Button
-                        android:id="@+id/btn1"
+                        android:id="@+id/EIN"
                         android:layout_width="wrap_content"
                         android:layout_height="24dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="@dimen/tab_element"
                         android:background="@color/menuButton"
+                        android:onClick="OpenActivities"
                         android:text="@string/materia1" />
+
                     <Button
+                        android:id="@+id/TRI"
                         android:layout_width="wrap_content"
                         android:layout_height="24dp"
                         android:layout_gravity="center_horizontal"
-                        android:text="@string/materia2"
+                        android:layout_marginTop="@dimen/tab_element"
                         android:background="@color/menuButton"
-                        android:layout_marginTop="@dimen/tab_element"/>
+                        android:onClick="OpenActivities"
+                        android:text="@string/materia2" />
+
                     <Button
+                        android:id="@+id/CIN"
                         android:layout_width="wrap_content"
                         android:layout_height="24dp"
                         android:layout_gravity="center_horizontal"
-                        android:text="@string/materia3"
+                        android:layout_marginTop="@dimen/tab_element"
                         android:background="@color/menuButton"
-                        android:layout_marginTop="@dimen/tab_element"/>
+                        android:onClick="OpenActivities"
+                        android:text="@string/materia3" />
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="24dp"
