@@ -53,4 +53,10 @@
     <string name="action_settings">settings</string>
     <string name="menumaterias2"><b>Facultad de Jurisprudencia y Ciencias Sociales</b></string>
     <string name="menumaterias1"><b>Escuela de Relaciones Internacionales</b></string>
+
+
+    <!--Facebook session -->
+    <string name="facebook_app_id">202164323805529</string>
+    <string name="fb_login_protocol_scheme">fb202164323805529</string>
+    <string name="facebook_status_fmt">Facebook User: %s</string>
 </resources>
