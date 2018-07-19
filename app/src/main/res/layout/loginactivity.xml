@@ -56,22 +56,40 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:textAllCaps="false"
-        android:layout_marginBottom="78dp"
+        android:layout_marginBottom="99dp"
         android:background="@color/colorPrimary"
         android:text="Log ing (Ingresar)"
+        android:textAllCaps="false"
         android:textColor="#FFF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/info"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textSize="18sp"
+        />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal" />
 
     <Button
         android:id="@+id/buttonRegistrar"
         android:layout_width="wrap_content"
         android:layout_height="26dp"
-        android:layout_below="@+id/buttonLogin"
-        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="-78dp"
+        android:layout_marginBottom="20dp"
         android:background="@color/colorPrimary"
         android:text="Registrarse"
+        android:textAllCaps="false"
         android:textColor="#FFF" />
 
 </RelativeLayout>
