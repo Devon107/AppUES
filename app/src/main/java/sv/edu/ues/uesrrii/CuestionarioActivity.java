@@ -86,7 +86,7 @@ public class CuestionarioActivity extends AppCompatActivity {
         @Override
         protected List<Pregunta> doInBackground(String... strings) {
             String id = strings[0];
-            final String url = "http://10.0.2.2/webservices/";
+            final String url = "http://uesapprr.com/webservices/";
             List<Pregunta> listaPreguntas = new ArrayList<Pregunta>() {
             };
             Retrofit retrofit = new Retrofit.Builder()
