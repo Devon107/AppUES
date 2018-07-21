@@ -21,7 +21,7 @@ do{
   $rsRes = mysqli_query($conexion,$sqlRes);
 
   while($rowRes = mysqli_fetch_object($rsRes)){
-    $respuesta[] = $rowRes;
+    $respuestas[] = $rowRes;
     $json[$i] -> respuestas = $respuestas;
   }
   $i++;
