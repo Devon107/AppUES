@@ -53,7 +53,6 @@ public class Login extends AppCompatActivity{
     protected void onCreate(Bundle savedInstacesState){
         super.onCreate(savedInstacesState);
             FacebookSdk.sdkInitialize(getApplicationContext());
-            AppEventsLogger.activateApp(this);
         callbackManager = CallbackManager.Factory.create();
         mAuth = FirebaseAuth.getInstance();
         setContentView(R.layout.loginactivity);
@@ -77,7 +76,6 @@ public class Login extends AppCompatActivity{
         });
 
         accessToken = AccessToken.getCurrentAccessToken();
-        isLoggedIn = accessToken != null && !accessToken.isExpired();
         // Callback registration
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
@@ -101,8 +99,6 @@ public class Login extends AppCompatActivity{
                 Toast.makeText(Login.this, "Ha ocurrido un error", Toast.LENGTH_SHORT).show();
             }
         });
-
-        LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("public_profile"));
     }
 
     @Override
@@ -115,7 +111,6 @@ public class Login extends AppCompatActivity{
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         callbackManager.onActivityResult(requestCode, resultCode, data);
-        ejecutarPrincipal();
     }
 
     private void enlazarUI(){
@@ -159,6 +154,7 @@ public class Login extends AppCompatActivity{
     private boolean isValidPassword(String password){
         return password.length()>=4;
     }
+
     private void ejecutarPrincipal(){
         Intent intent = new Intent(this, PrincipalActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -196,8 +192,12 @@ public class Login extends AppCompatActivity{
         if (user != null) {
             Log.e("Nombre",getString(R.string.facebook_status_fmt, user.getDisplayName()));
             Log.e("Email",getString(R.string.facebook_status_fmt, user.getEmail()));
-
+            ejecutarPrincipal();
         }
+    }
+    public void logout(){
+        LoginManager.getInstance().logOut();
+        FirebaseAuth.getInstance().signOut();
     }
 
 }
