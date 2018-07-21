@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "200101226292",
+    "firebase_url": "https://appues-master.firebaseio.com",
+    "project_id": "appues-master",
+    "storage_bucket": "appues-master.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200101226292:android:c95c845f6dfd397f",
+        "android_client_info": {
+          "package_name": "sv.edu.ues.uesrrii"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "200101226292-1iqub6hh05g9qem5ghq477ickb8ln2e4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sv.edu.ues.uesrrii",
+            "certificate_hash": "cc3e0d3f0043043f393f4f27200f82ff5afef535"
+          }
+        },
+        {
+          "client_id": "200101226292-mgkfk49esk4sg0cpdr3v7dn4248kgc78.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcsJDNcejg0U0U1ILqRlXgtAKenJc5ns8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "200101226292-mgkfk49esk4sg0cpdr3v7dn4248kgc78.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
