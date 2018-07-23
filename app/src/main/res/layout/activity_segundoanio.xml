@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/Año2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ciclo 3"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/tab_element"/>
+        <Button
+            android:id="@+id/materia11"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/materia11"
+            android:background="@color/menuButton"
+            android:onClick="OpenActivities"
+            android:layout_marginTop="@dimen/tab_element"/>
+        <Button
+            android:id="@+id/materia12"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/materia12"
+            android:background="@color/menuButton"
+            android:onClick="OpenActivities"
+            android:layout_marginTop="@dimen/tab_element"/>
+        <Button
+            android:id="@+id/materia13"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/materia13"
+            android:background="@color/menuButton"
+            android:onClick="OpenActivities"
+            android:layout_marginTop="@dimen/tab_element"/>
+        <Button
+            android:id="@+id/materia14"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/materia14"
+            android:background="@color/menuButton"
+            android:layout_marginTop="@dimen/tab_element"/>
+        <Button
+            android:id="@+id/TRI"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/materia15"
+            android:background="@color/menuButton"
+            android:onClick="OpenActivities"
+            android:layout_marginTop="@dimen/tab_element"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ciclo 4"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/tab_element"/>
+        <Button
+            android:id="@+id/materia16"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/materia16"
+            android:background="@color/menuButton1"
+            android:onClick="OpenActivities"
+            android:layout_marginTop="@dimen/tab_element"/>
+        <Button
+            android:id="@+id/materia17"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/materia17"
+            android:background="@color/menuButton1"
+            android:onClick="OpenActivities"
+            android:layout_marginTop="@dimen/tab_element"/>
+        <Button
+            android:id="@+id/materia18"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/materia18"
+            android:background="@color/menuButton1"
+            android:onClick="OpenActivities"
+            android:layout_marginTop="@dimen/tab_element"/>
+        <Button
+            android:id="@+id/materia19"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/materia19"
+            android:background="@color/menuButton1"
+            android:onClick="OpenActivities"
+            android:layout_marginTop="@dimen/tab_element"/>
+        <Button
+            android:id="@+id/materia20"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/materia20"
+            android:background="@color/menuButton1"
+            android:onClick="OpenActivities"
+            android:layout_marginTop="@dimen/tab_element"/>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
