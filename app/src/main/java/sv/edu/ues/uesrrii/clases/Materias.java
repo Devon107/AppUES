@@ -1,10 +1,10 @@
 package sv.edu.ues.uesrrii.clases;
 
-public class Materia {
+public class Materias {
     private String idMateria;
     private String nombreMateria;
 
-    public Materia(String idMateria, String nombreMateria) {
+    public Materias(String idMateria, String nombreMateria) {
         this.idMateria = idMateria;
         this.nombreMateria = nombreMateria;
     }

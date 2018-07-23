@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,12 +17,41 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".PrincipalActivity">
+        </activity>
+
+        <activity android:name=".MateriasActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Login"/>
+                android:value=".PrincipalActivity" />
         </activity>
-        <activity android:name=".MateriasActivity">
+
+        <activity android:name=".PrimerActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PrincipalActivity" />
+        </activity>
+
+        <activity android:name=".SegundoActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PrincipalActivity" />
+        </activity>
+
+        <activity android:name=".TercerActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PrincipalActivity" />
+        </activity>
+
+        <activity android:name=".CuartoActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PrincipalActivity" />
+        </activity>
+
+        <activity android:name=".QuintoActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".PrincipalActivity" />
@@ -31,6 +61,9 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MateriasActivity" />
+        </activity>
+
+        <activity android:name=".PuntajeActivity">
         </activity>
 
         <meta-data android:name="com.facebook.sdk.ApplicationId"

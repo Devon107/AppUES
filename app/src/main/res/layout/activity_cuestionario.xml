@@ -24,56 +24,73 @@
             android:id="@+id/txtQuestion"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:background="#efe5fd"
             android:gravity="center_vertical|center_horizontal"
-            android:text="TextView" />
+            android:text="@string/pregunta"
+            android:padding="3dp"
+            android:ems="10"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:typeface="serif" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="50dp" />
+            android:layout_height="30dp" />
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_vertical|center_horizontal">
+            android:gravity="center">
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical|center_horizontal">
+            <Button
+                android:id="@+id/btnAns1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="listQuestions"
+                android:text="@string/a"
+                android:textSize="12sp" />
 
-                <Button
-                    android:id="@+id/btnAns1"
-                    android:layout_height="wrap_content"
-                    android:onClick="listQuestions"
-                    android:text="Ans1" />
+            <Button
+                android:id="@+id/btnAns2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="listQuestions"
+                android:text="@string/b"
+                android:textSize="12sp" />
 
-                <Button
-                    android:id="@+id/btnAns2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ans2" />
-            </TableRow>
+            <Button
+                android:id="@+id/btnAns3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="listQuestions"
+                android:text="@string/c"
+                android:textSize="12sp" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical|center_horizontal">
+            <Button
+                android:id="@+id/btnAns4"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="listQuestions"
+                android:text="@string/d"
+                android:textSize="12sp" />
 
-                <Button
-                    android:id="@+id/btnAns3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ans3" />
-
-                <Button
-                    android:id="@+id/btnAns4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ans4" />
-
-            </TableRow>
-
+            <Button
+                android:id="@+id/btnAns5"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="listQuestions"
+                android:text="@string/e"
+                android:textSize="12sp" />
         </TableLayout>
 
     </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
 </android.support.constraint.ConstraintLayout>

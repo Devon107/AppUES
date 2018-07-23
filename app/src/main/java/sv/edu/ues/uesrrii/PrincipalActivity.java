@@ -1,33 +1,16 @@
 package sv.edu.ues.uesrrii;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.Signature;
-import android.provider.ContactsContract;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Base64;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.List;
-
-import sv.edu.ues.uesrrii.clases.Pregunta;
 
 import com.facebook.FacebookSdk;
-import com.facebook.appevents.AppEventsLogger;
-import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class PrincipalActivity extends AppCompatActivity {
@@ -42,16 +25,59 @@ public class PrincipalActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         setContentView(R.layout.activity_principal);
         prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
-        Button btn = (Button) findViewById(R.id.btn1);
-        btn.setOnClickListener(new View.OnClickListener() {
+        Button btn1 = (Button) findViewById(R.id.anio1);
+        Button btn2 = (Button) findViewById(R.id.anio2);
+        Button btn3 = (Button) findViewById(R.id.anio3);
+        Button btn4 = (Button) findViewById(R.id.anio4);
+        Button btn5 = (Button) findViewById(R.id.anio5);
+        btn1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent ListMaterias = new Intent(getApplicationContext(), PrimerActivity.class);
+                startActivity(ListMaterias);
+            }
+        });
+        btn2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent ListMaterias = new Intent(getApplicationContext(), SegundoActivity.class);
+                startActivity(ListMaterias);
+            }
+        });
+        btn3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent ListMaterias = new Intent(getApplicationContext(), TercerActivity.class);
+                startActivity(ListMaterias);
+            }
+        });
+        btn4.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent ListMaterias = new Intent(getApplicationContext(), CuartoActivity.class);
+                startActivity(ListMaterias);
+            }
+        });
+        btn5.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent ListMaterias = new Intent(getApplicationContext(), QuintoActivity.class);
+                startActivity(ListMaterias);
+            }
+        });
+        /*btn5.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 Intent ListMaterias = new Intent(getApplicationContext(), MateriasActivity.class);
                 startActivity(ListMaterias);
             }
-        });
-
+        });*/
         //printKeyHash(this);
     }
 

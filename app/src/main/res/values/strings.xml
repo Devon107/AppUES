@@ -59,4 +59,10 @@
     <string name="facebook_app_id">202164323805529</string>
     <string name="fb_login_protocol_scheme">fb202164323805529</string>
     <string name="facebook_status_fmt">Facebook User: %s</string>
+    <string name="pregunta">Pregunta</string>
+    <string name="b">B</string>
+    <string name="a">A</string>
+    <string name="c">C</string>
+    <string name="d">D</string>
+    <string name="e">E</string>
 </resources>

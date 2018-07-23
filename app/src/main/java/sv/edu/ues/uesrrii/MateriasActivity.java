@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.TabHost;
 
 public class MateriasActivity extends AppCompatActivity {
-    String[] id_materias = {"EIN", "TRI", "CIN"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
