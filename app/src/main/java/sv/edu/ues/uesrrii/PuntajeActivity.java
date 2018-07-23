@@ -92,9 +92,9 @@ public class PuntajeActivity extends AppCompatActivity{
         int i=0;
         int puntos = 0;
         for(String p : preguntas){
-                txtView.append(""+(i+1)+". "+p+"\n");
+                txtView.append(""+(i+1)+". "+p+"\n\n");
                     for(Object r : respuestas.get(i)){
-                        txtView.append(""+r.toString()+"\n");
+                        txtView.append(" - "+r.toString()+"\n");
                     }
 
                     if(aciertos[i].equals("Correcto"))
@@ -106,7 +106,7 @@ public class PuntajeActivity extends AppCompatActivity{
         Log.e("","puntos :"+puntos+"  i: "+ i);
         double score = ((double)puntos/i)*100;
         DecimalFormat formatter = new DecimalFormat("#.##");
-        txtView.append("\t\t\t\t\t\t\t\tTu Score es: "+ formatter.format(score) +"\n\n");
+        txtView.append("\t\t\t\t\t\tTu Score es: "+ formatter.format(score) +".\t Total: "+ puntos+" aciertos de "+ i +" preguntas.\n\n");
 
     }
 
