@@ -7,4 +7,10 @@
     <color name="menuButton1">#00838f</color>
     <color name="textMateriasColor">#283593</color>
     <color name="textmain">#000000</color>
+    <color name="anio5">#01579B</color>
+    <color name="anio4">#1565C0</color>
+    <color name="anio3">#1976D2</color>
+    <color name="anio2">#2196F3</color>
+    <color name="anio1">#64B5F6</color>
+    <color name="finalizar">#ffffff</color>
 </resources>
