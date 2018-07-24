@@ -53,7 +53,7 @@
 
 				//creating a new record in the database
 				$result = $db->createUsuario(
-					$_POST['nonmbre'],
+					$_POST['nombre'],
 					$_POST['apellido'],
 					$_POST['email']
 				);
@@ -66,6 +66,9 @@
 
 					//in message we have a success message
 					$response['message'] = 'Usuario added successfully';
+
+					//token
+					$response['token'] = 'createusuario';
 
 					//and we are getting all the heroes from the database in the response
 					$response['usuarios'] = $db->getUsuarios($_POST['email']);
@@ -82,7 +85,7 @@
 
 			case 'createpuntos':
 				//first check the parameters required for this request are available or not
-				isTheseParametersAvailable(array('nombre','apellido','email'));
+				isTheseParametersAvailable(array('username','idMateria','puntuacion'));
 
 				//creating a new dboperation object
 				$db = new DbOperation();
@@ -101,7 +104,10 @@
 					$response['error'] = false;
 
 					//in message we have a success message
-					$response['message'] = 'Usuario added successfully';
+					$response['message'] = 'Score added successfully';
+
+					//token
+					$response['token'] = 'createpuntos';
 
 					//and we are getting all the heroes from the database in the response
 					$response['puntos'] = $db->getPuntos($_POST['username']);
@@ -122,6 +128,7 @@
 				$db = new DbOperation();
 				$response['error'] = false;
 				$response['message'] = 'Request successfully completed';
+				$response['token'] = 'getpreguntas';
 				$response['preguntas'] = $db->getpreguntas($_GET['idMateria']);
 			break;
 
@@ -130,6 +137,7 @@
 				$db = new DbOperation();
 				$response['error'] = false;
 				$response['message'] = 'Request successfully completed';
+				$response['token'] = 'getrespuestas';
 				$response['respuestas'] = $db->getRespuestas($_GET['idPregunta']);
 			break;
 
@@ -138,15 +146,18 @@
 				$db = new DbOperation();
 				$response['error'] = false;
 				$response['message'] = 'Request successfully completed';
+				$response['token'] = 'getpuntos';
 				$response['puntos'] = $db->getpuntos($_POST['username']);
 			break;
 
 			//if the call is getusuarios
 			case 'getusuarios':
+				isTheseParametersAvailable(array('username'));
 				$db = new DbOperation();
 				$response['error'] = false;
 				$response['message'] = 'Request successfully completed';
-				$response['usuarios'] = $db->getpuntos($_POST['username']);
+				$response['token'] = 'getusuarios';
+				$response['usuarios'] = $db->getUsuarios($_POST['username']);
 			break;
 
 			//if the call is getmaterias
@@ -154,6 +165,7 @@
 				$db = new DbOperation();
 				$response['error'] = false;
 				$response['message'] = 'Request successfully completed';
+				$response['token'] = 'getmaterias';
 				$response['materias'] = $db->getMaterias($_GET['idMateria']);
 			break;
 

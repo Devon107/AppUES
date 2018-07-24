@@ -26,17 +26,19 @@ class DbOperation
 	* When this method is called a new record is created in the database
 	*/
 	function createUsuario($nombre, $apellido, $email){
-    $tipoUsuario = 'USR';
-		$stmt = $this->con->prepare("INSERT INTO usuarios (username, nombres, apellidos, email, tipoUsuario, fechaRegitro) VALUES (?, ?, ?, ?, ?, ?)");
-		$stmt->bind_param("ssssss", $email, $nombre, $apellido, $email, $tipoUsuario, date("Y-m-d"));
+    $tipoUsuario = "USR";
+    $date = date("Y-m-d");
+		$stmt = $this->con->prepare("INSERT INTO usuarios (username,	nombres,	apellidos,	email,	fechaRegistro, tipoUsuario) VALUES (?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("ssssss", $email, $nombre, $apellido, $email ,$date,$tipoUsuario);
 		if($stmt->execute())
 			return true;
 		return false;
 	}
 
   function createPuntos($username, $idMateria, $puntuacion){
+    $date = date("Y-m-d");
 		$stmt = $this->con->prepare("INSERT INTO puntuaciones (username, idMateria, puntuacion, fechaPuntuacion) VALUES (?, ?, ?, ?)");
-		$stmt->bind_param("ssis", $username, $idMateria, $puntuacion, date("Y-m-d"));
+		$stmt->bind_param("ssds", $username, $idMateria, $puntuacion, $date);
 		if($stmt->execute())
 			return true;
 		return false;
@@ -128,26 +130,34 @@ class DbOperation
 		return $Respuestas;
 	}
 
-  function getUsuario($username){
-		$stmt = $this->con->prepare("SELECT registro, username, nombres, apellidos, email, fechaRegitro FROM usuarios WHERE username = ?");
+  function getUsuarios($username){
+    /*$stmt = $this->con->prepare("SELECT COUNT(*) FROM usuarios WHERE username = ?");
     $stmt->bind_param("s",$username);
-		$stmt->execute();
-		$stmt->bind_result($registro, $username, $nombres, $apellidos, $email, $fechaRegistro);
+    $count = $stmt->execute();
+    if($count<1)
+    {
+      return false;
+    }*/
+		$request = $this->con->prepare("SELECT registro, username, nombres, apellidos, email, fechaRegistro FROM usuarios WHERE username = ?");
+    $request->bind_param("s",$username);
+		$request->execute();
+		$request->bind_result($registro, $username, $nombres, $apellidos, $email, $fechaRegistro);
 
-		$Usaurios = array();
+		$Usuarios = array();
 
-		while($stmt->fetch()){
-			$Respuesta  = array();
-      $Respuesta['registro'] = $registro;
-			$Respuesta['idPregunta'] = $idPregunta;
-			$Respuesta['enunciadoPregunta'] = $enunciadoPregunta;
-			$Respuesta['idMateria'] = $idMateria;
-      $Respuesta['fechaModificacion'] = $fechamodificacion;
+		while($request->fetch()){
+			$usuario  = array();
+      $usuario['registro'] = $registro;
+			$usuario['username'] = $username;
+			$usuario['nombres'] = $nombres;
+      $usuario['apellidos'] = $nombres;
+			$usuario['email'] = $email;
+      $usuario['fecharegistro'] = $fechaRegistro;
 
-			array_push($Respuestas, $Respuesta);
+			array_push($Usuarios, $usuario);
 		}
 
-		return $Respuestas;
+		return $Usuarios;
 	}
 
   function getPuntos($username){
@@ -177,7 +187,6 @@ class DbOperation
     $stmt->bind_param('s',$idMateria);
 		$stmt->execute();
 		$stmt->bind_result($idMateria, $nombreMateria);
-
 		$Materias = array();
 
 		while($stmt->fetch()){
@@ -188,7 +197,7 @@ class DbOperation
 			array_push($Materias, $Materia);
 		}
 
-		return $Materia;
+		return $Materias;
 	}
 
 	/*
