@@ -268,6 +268,7 @@ public class CuestionarioActivity extends AppCompatActivity {
             super.onPostExecute(s);
             progressBar.setVisibility(GONE);
             try {
+                Log.e("result",s);
                 JSONObject object = new JSONObject(s);
                 if (!object.getBoolean("error")) {
                     Toast.makeText(getApplicationContext(), object.getString("message"), Toast.LENGTH_SHORT).show();

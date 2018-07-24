@@ -12,6 +12,7 @@ import android.widget.Button;
 
 import com.facebook.FacebookSdk;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class PrincipalActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -23,6 +24,16 @@ public class PrincipalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         mAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            // User is signed in
+        } else {
+            Intent intent = new Intent(this, Login.class);
+            Login logout = new Login();
+            logout.logout();
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        }
         setContentView(R.layout.activity_principal);
         prefs = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
         Button btn1 = (Button) findViewById(R.id.anio1);
@@ -70,15 +81,6 @@ public class PrincipalActivity extends AppCompatActivity {
                 startActivity(ListMaterias);
             }
         });
-        /*btn5.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent ListMaterias = new Intent(getApplicationContext(), MateriasActivity.class);
-                startActivity(ListMaterias);
-            }
-        });*/
-        //printKeyHash(this);
     }
 
     @Override

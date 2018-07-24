@@ -31,7 +31,7 @@ public class RequestHandler {
         try {
             //Initializing Url
             url = new URL(requestURL);
-
+            Log.e("URL",url.toString());
             //Creating an htmlurl connection
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
