@@ -4,7 +4,8 @@ use ues_rr_ii;
 insert into materias(registro, idMateria, nombreMateria, fechaModificacion) values
 (null, 'EIN','Economia Internacional', CURDATE()),
 (null, 'TRI','Teoria de las Relaciones Internacionales', CURDATE()),
-(null, 'CIN','Cooperacion Internacional', CURDATE());
+(null, 'CIN','Cooperacion Internacional', CURDATE()),
+(null, 'DEM', 'Desarrollo Económico y Medio Ambiente', CURDATE());
 #Tipos de usuario
 insert into tipousuarios(registro, idTipo, tipoUsuario, fechaModificacion) values
 (null, 'ADM','Administrador', CURDATE()),
@@ -1469,7 +1470,7 @@ insert into respuestas(registro, enunciadoRespuesta, idPregunta, correcto, fecha
 
   (null, 'Ayuda no reembolsable', 'CIN00235', 0, CURDATE()),
   (null, 'Ayuda reembolsable', 'CIN00235', 1, CURDATE());
-  
+
 insert into respuestas(registro, enunciadoRespuesta, idPregunta, correcto, fechaModificacion) values
   (null, 'Ayuda de emergencia', 'CIN00236', 0, CURDATE()),
   (null, 'Subvenciones ONGD', 'CIN00236', 0, CURDATE()),
@@ -1525,7 +1526,7 @@ insert into respuestas(registro, enunciadoRespuesta, idPregunta, correcto, fecha
   (null, 'Apropiación', 'CIN00245', 0, CURDATE()),
   (null, 'Alineación', 'CIN00245', 0, CURDATE()),
   (null, 'Armonización', 'CIN00245', 0, CURDATE());
-  
+
 insert into respuestas(registro, enunciadoRespuesta, idPregunta, correcto, fechaModificacion) values
   (null, '2001', 'CIN00246', 0, CURDATE()),
   (null, '2130', 'CIN00246', 1, CURDATE()),
@@ -1576,7 +1577,7 @@ insert into respuestas(registro, enunciadoRespuesta, idPregunta, correcto, fecha
   (null, 'Cooperación Internacional al Desarrollo', 'CIN00255', 0, CURDATE()),
   (null, 'Ayuda al Desarrollo', 'CIN00255', 0, CURDATE()),
   (null, 'Ayuda Oficial al Desarrollo (AOD)', 'CIN00255', 1, CURDATE());
-  
+
 insert into respuestas(registro, enunciadoRespuesta, idPregunta, correcto, fechaModificacion) values
   (null, 'Ayuda al Desarrollo', 'CIN00256', 0, CURDATE()),
   (null, 'Ayuda Oficial al Desarrollo (AOD)', 'CIN00256', 0, CURDATE()),
@@ -1624,3 +1625,630 @@ insert into respuestas(registro, enunciadoRespuesta, idPregunta, correcto, fecha
   (null, '4 o Foro de Alto nivel sobre la Eficacia de la Ayuda, Busán (Corea del Sur) 2011', 'CIN00265', 0, CURDATE()),
   (null, 'Foro de Alto Nivel de Roma, en 2128.', 'CIN00265', 0, CURDATE()),
   (null, '3r. Foro de Alto Nivel sobre Eficacia de la Ayuda en Accra (Ghana) 2008.', 'CIN00265', 0, CURDATE());
+
+  # #DEM
+  # #Ejemplo de ingreso de preguntas para Desarrollo Economico y Medio Ambiente  se manda como parametro CIN en la funcion
+  insert into preguntas(registro, idPregunta, enunciadoPregunta, idMateria, fechaModificacion) values
+  (null, 'DEM00266', 'Es un proceso que abarca crecimiento económico y modernización económica y social, consistente ésta en el cambio estructural de la economía y las instituciones (económicas, políticas, sociales y culturales) vigentes en el seno de una sociedad, cuyo resultado ultimo es la consecución de un mayor nivel de desarrollo humano y una ampliación la capacidad y la libertad de las personas.', 'DEM', CURDATE()),#1
+  (null, getIdPregunta('DEM'), '¨El influjo más importante sobre la economía del desarrollo procede, sin duda, de la teoría¨.', 'DEM', CURDATE()),#2
+  (null, getIdPregunta('DEM'), 'Era acumulación de factores de producción: capital y trabajo; cuanto más capital y más trabajo estén disponibles en una economía, más crecerá ésta; el limite lo impone el advenimiento del estado estacionario, más allá del cual no cabría progreso material.', 'DEM', CURDATE()),#3
+  (null, getIdPregunta('DEM'), 'El crecimiento neoclásico procedería de dos procesos:', 'DEM', CURDATE()),#4
+  (null, getIdPregunta('DEM'), 'El concepto de Desarrollo es:', 'DEM', CURDATE()),#5
+  (null, getIdPregunta('DEM'), 'Dentro de las Teorías del Crecimiento  Econóico se encuentra:', 'DEM', CURDATE()),#6
+  (null, getIdPregunta('DEM'), 'Dentro de las Teorías Económicas del Desarrollo se encuentran:', 'DEM', CURDATE()),#7
+  (null, getIdPregunta('DEM'), 'Documento en el que se introduce el término “desarrollo sostenible”. ', 'DEM', CURDATE()),#8
+  (null, getIdPregunta('DEM'), 'En 1969, DUDLEY SEERS cuestiona la visión oficial del desarrollo; y propone 3 referencias para saber si un país había avanzado hacia un desarrollo:', 'DEM', CURDATE()),#9
+  (null, getIdPregunta('DEM'), 'Para el período 1945-1980 podemos identificar básicamente dos grandes enfoques del desarrollo, sobre los cuales en un inicio se cimentó la teoría del desarrollo', 'DEM', CURDATE()),#10
+  (null, getIdPregunta('DEM'), 'El contexto histórico del nacimiento del enfoque de la modernización  (1945- 1965) está marcado por el surgimiento del conflicto', 'DEM', CURDATE()),#11
+  (null, getIdPregunta('DEM'), 'La expression   “Tercer Mundo” (Tiers Monde) fue acuñada en 1952  por :', 'DEM', CURDATE()),#12
+  (null, getIdPregunta('DEM'), 'La expresión   “Tercer Mundo” referirse a las naciones jóvenes de ________ comenzaban a independizarse de las potencias coloniales europeas culminada la Segunda Guerra Mundial. Sauvy vio en las aspiraciones de estos nuevos países algunas semejanzas con el Tercer Estado de la Francia revolucionaria.', 'DEM', CURDATE()),#13
+  (null, getIdPregunta('DEM'), 'Los Paises de  “Primer Mundo” son aquellos que:', 'DEM', CURDATE()),#14
+  (null, getIdPregunta('DEM'), 'El enfoque de la modernización presentó cuatro características principales que el economista belga  Jean Philippe Peemans las resume:', 'DEM', CURDATE()),#15
+  (null, getIdPregunta('DEM'), 'Se origina en la Conferencia Afro-Asiática de Bandung, Indonesia, en 1955, la cual reunió a 29 Jefes de Estado de la primera generación postcolonial de líderes de los dos continentes en mención, para identificar y evaluar los problemas mundiales del momento, a fin de desarrollar políticas conjuntas en las relaciones internacionales.', 'DEM', CURDATE()),#16
+  (null, getIdPregunta('DEM'), 'El pensamiento dependentista emerge en América Latina a mediados de los años', 'DEM', CURDATE()),#17
+  (null, getIdPregunta('DEM'), 'Consiste en satisfacer necesidades básicas de las personas.', 'DEM', CURDATE()),#18
+  (null, getIdPregunta('DEM'), 'Se empezó a hablar de desarrollo el discurso inaugural del president____en el año de:', 'DEM', CURDATE()),#19
+  (null, getIdPregunta('DEM'), 'Conferencia de Naciones Unidas sobre el Medio Humano llevada a cabo en Estocolmo en1972, llamada también', 'DEM', CURDATE()),#20
+  (null, getIdPregunta('DEM'), 'Conferencia que  le dio inicio al Programa de Naciones Unidas para el Medio Ambiente (PNUMA)', 'DEM', CURDATE()),#21
+  (null, getIdPregunta('DEM'), 'Este empresario canadiense en la reunión constitutiva del PNUMA en Ginebra en 1973 acuña el término de ecodesarrollo', 'DEM', CURDATE()),#22
+  (null, getIdPregunta('DEM'), 'Autor que planteó en su obra “Ensayo sobre la población”, la necedidad de un control demográfico para evitar una crisis en la disponibilidad de recursos y alimentos.', 'DEM', CURDATE()),#23
+  (null, getIdPregunta('DEM'), 'Es un espacio donde hay condiciones primitivas de flora y fauna, por lo que se considera de gran relevancia en la preservación de biodiversidad y ecosistemas.', 'DEM', CURDATE()),#24
+  (null, getIdPregunta('DEM'), 'Con que otro nombre se le conoce el Informe Brundtland.', 'DEM', CURDATE()),#25
+  (null, getIdPregunta('DEM'), 'Un desarrollo que satisface las necesidades de la generación presente, sin comprometer la capacidad de las generaciones futuras, para satisfacer sus propias necesidades', 'DEM', CURDATE()),#26
+  (null, getIdPregunta('DEM'), 'Dimensiones que abarca el término “ desarrollo sostenible”', 'DEM', CURDATE()),#27
+  (null, getIdPregunta('DEM'), 'Es la Capacidad del ecosistema para autogenerarse.', 'DEM', CURDATE()),#28
+  (null, getIdPregunta('DEM'), 'Es el autor que introduce el término “desarrollo humano”', 'DEM', CURDATE()),#29
+  (null, getIdPregunta('DEM'), 'Es el proceso de desarrollo se ve como un proceso de ampliación de las “capacidades” de las personas y no como un aumento de la utilidad y del bienestar y satisfacción económicos', 'DEM', CURDATE()),#30
+  (null, getIdPregunta('DEM'), 'Fue durante mucho tiempo el principal y más importante indicador del nivel de desarrollo y había sido tradicionalmente el indicador más importante de progreso en materia de desarrollo.', 'DEM', CURDATE()),#31
+  (null, getIdPregunta('DEM'), 'Se convirtió inmediatamente en un indicador alternativo de desarrollo ampliamente aceptado', 'DEM', CURDATE()),#32
+  (null, getIdPregunta('DEM'), 'Pretende medir capacidades, el conjunto de opciones de que dispone una persona y, en última instancia, las libertades de que goza.', 'DEM', CURDATE()),#33
+  (null, getIdPregunta('DEM'), 'El IDH tiene cuatro componentes', 'DEM', CURDATE()),#34
+  (null, getIdPregunta('DEM'), 'El IDH incluye asimismo entre sus components el PNB per cápita, aunque expresado en términos de paridad de poder', 'DEM', CURDATE()),#35
+  (null, getIdPregunta('DEM'), 'El Índice de Desarrollo Humano también puede ajustarse para incorporar ', 'DEM', CURDATE()),#36
+  (null, getIdPregunta('DEM'), 'Primer informe de Desarrollo Humano', 'DEM', CURDATE()),#37
+  (null, getIdPregunta('DEM'), 'Es el conjunto de prácticas que definen a una persona como miembro de pleno derecho de una sociedad', 'DEM', CURDATE()),#38
+  (null, getIdPregunta('DEM'), 'Propone la construcción de otro tipo de relaciones democráticas y otro modelo democrático que incluya no solamente a las mujeres, sino que, más complejo aún, se modifique el posicionamiento de los hombres y se establezcan relaciones democráticas entre los géneros.', 'DEM', CURDATE()),#39
+  (null, getIdPregunta('DEM'), 'Supone que los diferentes comportamientos, aspiraciones y necesidades de las mujeres y los hombres, se consideren, valoren y promuevan de igual manera. Ello no significa que mujeres y hombres deban ser iguales, sino que sus derechos, responsabilidades y oportunidades no dependan del sexo con el que han nacido', 'DEM', CURDATE()),#40
+  (null, getIdPregunta('DEM'), 'El medio para lograr la igualdad de género es la ____________, entendida como la justicia en el tratamiento a mujeres y hombres de acuerdo a sus respectivas necesidades', 'DEM', CURDATE()),#41
+  (null, getIdPregunta('DEM'), 'Es la forma en que todas las sociedades determinan las funciones, actitudes, valores y relaciones que conciernen a los hombres y a las mujeres: ', 'DEM', CURDATE()),#42
+  (null, getIdPregunta('DEM'), 'Hace referencia a los aspectos biológicos que se derivan de las diferencias sexuales (macho xy- hembra xx).', 'DEM', CURDATE()),#43
+  (null, getIdPregunta('DEM'), 'Hace referencia a una construcción cultural (masculino –femenino).', 'DEM', CURDATE()),#44
+  (null, getIdPregunta('DEM'), 'Se refiere a las distintas oportunidades asociadas con ser hombres y mujeres en los ámbitos económicos, sociales, políticos y culturales.', 'DEM', CURDATE()),#45
+  (null, getIdPregunta('DEM'), 'Sistema establece un orden de dominio y poder de lo masculine sobre lo femenino, e implica la supremacía del hombre en todas las instituciones importantes de la sociedad.', 'DEM', CURDATE()),#46
+  (null, getIdPregunta('DEM'), 'El sistema patriarcal muestra que hay dos factores importantes que caracterizan las relaciones sociales entre hombres y mujeres:', 'DEM', CURDATE()),#47
+  (null, getIdPregunta('DEM'), 'Es un sistema de pensamiento que, pese a su supuesta neutralidad, se refiere esencialmente a los hombres como sujetos sociales de poder, y define a las mujeres como objetos complementarios de los hombres.', 'DEM', CURDATE()),#48
+  (null, getIdPregunta('DEM'), 'En el modelo social androcéntrico como se da  la division sexual del trabajo ', 'DEM', CURDATE()),#49
+  (null, getIdPregunta('DEM'), 'Se define como un acto de violencia extrema contra las mujeres, en una cultura patriarcal. Forma parte del concepto más amplio de violencia de género en una sociedad patriarcal.', 'DEM', CURDATE()),#50
+  (null, getIdPregunta('DEM'), 'Se aprobó la Convención sobre la Eliminación de todas las Formas de Discriminación contra la Mujer (CEDAW).', 'DEM', CURDATE()),#51
+  (null, getIdPregunta('DEM'), 'Considerada la convención que consagró los derechos humanos de la mujer, y con la cual Naciones Unidas reconocía y condenaba por primera vez la discriminación ejercida contra la mujer como una violación a los derechos humanos.', 'DEM', CURDATE()),#52
+  (null, getIdPregunta('DEM'), 'Abre un nuevo capítulo en la lucha por la igualdad entre mujeres y hombres.', 'DEM', CURDATE()),#53
+  (null, getIdPregunta('DEM'), 'Fecha y lugar de la  primera conferencia mundial de la mujer que ha marcado la línea de trabajo a seguir en materia de igualdad entre mujeres y hombres', 'DEM', CURDATE()),#54
+  (null, getIdPregunta('DEM'), 'Cumbres mundiales donde se impone el enfoque de derechos humanos, que contribuiría de manera esencial al desarrollo de las capacidades de las personas y la igualdad de género.', 'DEM', CURDATE()),#55
+  (null, getIdPregunta('DEM'), 'Es un programa de acción dirigido a crear las condiciones necesarias para el empoderamiento de las mujeres y eliminar todos los obstáculos que dificultan la participación activa de las mujeres en todas las esferas de la vida pública y privada, mediante una participación plena en el proceso. de toma de decisiones en las esferas económica, social, cultural y política', 'DEM', CURDATE()),#56
+  (null, getIdPregunta('DEM'), 'Es un término que han introducido las mujeres en el lenguaje y en los foros políticos. Referida a la proporcionalidad representativa entre hombres y mujeres', 'DEM', CURDATE()),#57
+  (null, getIdPregunta('DEM'), 'Mide las desigualdades sociales y económicas entre hombres y mujeres.', 'DEM', CURDATE()),#58
+  (null, getIdPregunta('DEM'), 'Son un llamado universal a la adopción de medidas para poner fin a la pobreza, proteger el planeta y garantizar que todas las personas gocen de paz y prosperidad.', 'DEM', CURDATE()),#59
+  (null, getIdPregunta('DEM'), 'Es un conjunto de manifestaciones de poder, de formas de relación entre las personas y de toma de decisiones, sustentadas en valores que surgen en su interior y que, a lo largo del tiempo, se convierten en hábitos y en parte de la identidad o forma de ser de las instituciones.', 'DEM', CURDATE()),#60
+  (null, getIdPregunta('DEM'), 'El principal instrumento de acción de la planificación de género.', 'DEM', CURDATE()),#61
+  (null, getIdPregunta('DEM'), 'Son dos maneras diferentes de percibir y abordar el tema del papel de las mujeres en los modelos, programas y políticas globales de desarrollo.', 'DEM', CURDATE()),#62
+  (null, getIdPregunta('DEM'), 'Entendida como el fortalecimiento de las capacidades de las mujeres para su participación, en condiciones de igualdad, en la toma de decisions y en el acceso al poder.', 'DEM', CURDATE()),#63
+  (null, getIdPregunta('DEM'), 'Entendida como la integración de la perspectiva de género en todas las esferas de la vida, en todos los niveles y en todas las fases de una intervención.', 'DEM', CURDATE()),#64
+  (null, getIdPregunta('DEM'), 'Fue reconocida como un plan de acción a favor de las personas, el planeta y la prosperidad, que también tiene la intención de fortalecer la paz universal y el acceso a la justicia', 'DEM', CURDATE()),#65
+  (null, getIdPregunta('DEM'), 'Fecha  en la cual la Asamblea General de la ONU adopto la Agenda 2030:', 'DEM', CURDATE()),#66
+  (null, getIdPregunta('DEM'), 'Se refieren a las principales fuerzas socioeconómicas que ejercenpresiones sobre el estado del medio ambiente.', 'DEM', CURDATE()),#67
+  (null, getIdPregunta('DEM'), 'Tanto el consumo como la producción son componentes del:', 'DEM', CURDATE()),#68
+  (null, getIdPregunta('DEM'), 'Es reconocida como un derecho humano básico incluido en la Declaración Universal de los Derechos Humanos (UNDHR 1948)', 'DEM', CURDATE()),#69
+  (null, getIdPregunta('DEM'), 'Es otro componente de la transición demográfica y se caracteriza por el cambio  predominantemente rural-urbana', 'DEM', CURDATE()),#70
+  (null, getIdPregunta('DEM'), 'Los ODS entraron en vigor oficialmente', 'DEM', CURDATE()),#71
+  (null, getIdPregunta('DEM'), 'Se convoca a la ______, convirtiéndose en la primera oportunidad de discutir la problemática de forma directa en el plano global.', 'DEM', CURDATE()),#72
+  (null, getIdPregunta('DEM'), 'Conferencia sobre las valoraciones de avances y criterios para priorizar en el siguiente decenio. Énfasis estuvo en evaluación ambiental.', 'DEM', CURDATE()),#73
+  (null, getIdPregunta('DEM'), 'Fecha que se aprobó la Carta Mundial de la Naturaleza, Resolución de AG 37/7.', 'DEM', CURDATE()),#74
+  (null, getIdPregunta('DEM'), 'Reducción de sustancias agotadoras de la capa de ozono (CFC), Eliminación total de los CFC este año, mejora de la capa de ozono.  Y conectar regulación con acciones contra el cambio climático y extender compromisos', 'DEM', CURDATE()),#75
+  (null, getIdPregunta('DEM'), 'Importancia de disminuir prácticas insostenibles, fomentar políticas de control demográfico, cooperación internacional, desarrollo científico, favorezca el medio adoptar legislación que ambiente, responsabilidades diferenciadas, principio “el que contamina paga”, evaluación del impacto ambiental, inclusión de grupos vulnerables y situaciones de conflicto.', 'DEM', CURDATE()),#76
+  (null, getIdPregunta('DEM'), 'En esta se incluyen 8 objetivos cada uno con sus respectivas metas e indicadores de medición. En estos no se contempla de forma transversal el desarrollo sostenible, sin embargo se dedica el Objetivo 7 a “especificar” al respecto.', 'DEM', CURDATE()),#77
+  (null, getIdPregunta('DEM'), 'Financiamiento para el desarrollo, reafirmar compromiso de 0,7% del PIB como AOD priorizando a PMA', 'DEM', CURDATE()),#78
+  (null, getIdPregunta('DEM'), 'Es un protocolo de la Convención Marco de las Naciones Unidas sobre el Cambio Climático (CMNUCC)', 'DEM', CURDATE()),#79
+  (null, getIdPregunta('DEM'), 'Contexto internacional añade retos representatividad de al “pacto global”. Temas principales: Agua y productividad agrícola, saneamiento, energía, biodiversidad y salud. Dificultad en ratificar Convenios desde Río 92', 'DEM', CURDATE()),#80
+  (null, getIdPregunta('DEM'), 'Viene a ser la plataforma para la acción posterior al Protocolo de Kyoto, adoptada en la COP 21 en París. Destaca el compromiso de los 100,000 millones que deberán colocarse en beneficio de acciones de adaptación y mitigación', 'DEM', CURDATE()),#81
+  (null, getIdPregunta('DEM'), 'Son la autoridad máxima para la aplicación práctica de la Convención. Parten de la premisa de que el Cambio Climático es un problema global, planetario, por la desconexión territorial existente entre emisiones de GEI e impacto y por lo tanto, las soluciones deben adoptarse desde la globalidad.', 'DEM', CURDATE()),#82
+  (null, getIdPregunta('DEM'), 'La primera COP, se celebró en ', 'DEM', CURDATE()),#83
+  (null, getIdPregunta('DEM'), 'La Primera fase del Protocolo de Kioto entró en vigor en _______ y finalizó en 2012, con el compromiso por parte de los países desarrollados firmantes, de reducir colectivamente sus emisiones un 5 % respecto a las de 1990. Este Protocolo termina su vigencia al final del año 2020, año en el que, en principio, será sustituido por el Acuerdo alcanzado en la Cumbre de París1', 'DEM', CURDATE()),#84
+  (null, getIdPregunta('DEM'), 'Era preparar un marco institucional dispuesto para el año 2020, fecha de su entrada en vigor e imprescindible para la ejecución de lo acordado en París.', 'DEM', CURDATE()),#85
+  (null, getIdPregunta('DEM'), 'Según ONU-Hábitat , es un hogar deasentamiento precario” es “un grupo de personas que vive bajo el mismo techo en una zona urbana que carece de una o más de las siguientes condiciones: 1. Una vivienda durable de naturaleza permanente que proteja contra condiciones climáticas adversas. 2. Un espacio vital suficiente, lo que significa que no más de tres personas compartan una habitación. 3. Acceso fácil a agua potable en cantidad suficiente y a un precio razonable. 4. Acceso a saneamiento adecuado: letrina privada o pública compartida con una cantidad razonable de personas. 5. Tenencia segura para evitar los desalojos forzados”.', 'DEM', CURDATE()),#86
+  (null, getIdPregunta('DEM'), 'Son una herramienta de trabajo para la planificación, financiación y ejecución de acciones de desarrollo urbano en América Latina, que sitúa a la inclusión como meta y a la vez como elemento integrador del desarrollo en la ciudad', 'DEM', CURDATE()),#87
+  (null, getIdPregunta('DEM'), 'Debe ser un elemento transversal en las intervenciones en el ámbito urbano, fundamental para crear mejores condiciones de vida para la sociedad y altamente relevante para el desarrollo económico y medioambiental', 'DEM', CURDATE()),#88
+  (null, getIdPregunta('DEM'), 'Se manifiesta territorialmente y puede ser abordada desde el ámbito local.', 'DEM', CURDATE()),#89
+  (null, getIdPregunta('DEM'), 'Pretende identificar acciones específicas que las ciudades pueden realizer para revertir algunas de las condiciones estructurales y espaciales que conducen a la exclusión', 'DEM', CURDATE()),#90
+  (null, getIdPregunta('DEM'), 'Fundación del Fondo para el Medio Ambiente Mundial', 'DEM', CURDATE()),#91
+  (null, getIdPregunta('DEM'), 'El primer mecanismo de transferencia de recursos financieros a los países en desarrollo que se estableció en ese convenio, y que era condición para que estos se sumaran bajo consideraciones voluntarias a las tareas para lograr el objetivo de este acuerdo internacional, no ha jugado hasta ahora ningún papel significativo para promover o mejorar los sumideros naturales de CO2.', 'DEM', CURDATE()),#92
+  (null, getIdPregunta('DEM'), 'Las actividades forestales pueden ayudar a mitigar el Cambio Climático. Principalmente de tres formas', 'DEM', CURDATE()),#93
+  (null, getIdPregunta('DEM'), 'El concepto  REDD significa', 'DEM', CURDATE()),#94
+  (null, getIdPregunta('DEM'), 'REDD+ incluye 5 actividades:', 'DEM', CURDATE()),#95
+  (null, getIdPregunta('DEM'), 'Aspecto esencial para el tratamineto del dilemma Centralización-Descentralización en la formulación de políticas urbanas', 'DEM', CURDATE()),#96
+  (null, getIdPregunta('DEM'), 'Según la CEPAL, para que los países de la region puedan movilizar los recursos suficientes para implementar la Agenda 2030 es prioritario:', 'DEM', CURDATE()),#97
+  (null, getIdPregunta('DEM'), 'Identifique el component que correspnde a  la etapa de preparación  para el financiamiento climático: “ Planificación financiera”', 'DEM', CURDATE()),#98
+  (null, getIdPregunta('DEM'), '¿ En que consiste el enfoque de gobernanza en la formulación de Políticas Públicas? ', 'DEM', CURDATE()),#99
+  (null, getIdPregunta('DEM'), 'Establezca dos factores que intervienen como límites para una adecuada planificación del desarrollo por parte del Gobierno:', 'DEM', CURDATE()),#100
+  (null, getIdPregunta('DEM'), 'Nos enmarcamos en el concepto de _____como acción a partir de la identificación y priorización de problemas públicos:', 'DEM', CURDATE()),#101
+  (null, getIdPregunta('DEM'), 'Acciones deliberadas de las autoridades públicas que aspiran a resolver los problemas públicos atacando sus causas.', 'DEM', CURDATE()),#102
+  (null, getIdPregunta('DEM'), 'Es el marco Estratégico para el desarrollo:', 'DEM', CURDATE()),#103
+  (null, getIdPregunta('DEM'), 'Son recursos y actividades orientados a metas y objetivos específicos', 'DEM', CURDATE()),#104
+  (null, getIdPregunta('DEM'), 'Son actividades más localizadas:', 'DEM', CURDATE()),#105
+  (null, getIdPregunta('DEM'), 'Consiste en una técnica o instrumento para analizar la realidad. La idea de ciclo se refiere a un proceso continuo.', 'DEM', CURDATE()),#106
+  (null, getIdPregunta('DEM'), 'Aspectos que deben tomarse en cuenta en la fase de “análisis y decision de acciones” en el ciclo de formulación de Políticas públicas', 'DEM', CURDATE()),#107
+  (null, getIdPregunta('DEM'), 'Se considera como la argumentación clara a nivel técnico, político, social y financiero. Debe dimensionarse la necesidad de implementarla y que existen las condiciones para hacerlo con perspectivas de éxito.', 'DEM', CURDATE()),#108
+  (null, getIdPregunta('DEM'), 'Su importancia reside en la mejora de capacidades de instituciones, favorece generación de conocimientos y legitimidad.', 'DEM', CURDATE()),#109
+  (null, getIdPregunta('DEM'), 'Implica que las Políticas Públicas se discutan, diseñen, implementen y evalúen con participación de otros actores más allá del Gobierno.', 'DEM', CURDATE()),#110
+  (null, getIdPregunta('DEM'), 'Evolución de Enfoques en los años 1950-1970', 'DEM', CURDATE()),#111
+  (null, getIdPregunta('DEM'), 'Evolución de Enfoques en los años 1970-1990', 'DEM', CURDATE()),#112
+  (null, getIdPregunta('DEM'), 'Evolución de Enfoques en los años 1990-(…)', 'DEM', CURDATE()),#113
+  (null, getIdPregunta('DEM'), 'Identificar un problema y sus causas es clave en la estrategias:', 'DEM', CURDATE()),#114
+  (null, getIdPregunta('DEM'), 'En la fase de “Incorporación en la Agenda” intervienen los elementos de:', 'DEM', CURDATE()),#115
+  (null, getIdPregunta('DEM'), 'Los estudios del desarrollo son: ', 'DEM', CURDATE()),#116
+  (null, getIdPregunta('DEM'), 'Es considerado el ordenamiento de la cooperación:', 'DEM', CURDATE()),#117
+  (null, getIdPregunta('DEM'), 'Es causado mayormente por “aumentos en las concentraciones de gases de efecto invernadero en la atmósfera:', 'DEM', CURDATE()),#118
+  (null, getIdPregunta('DEM'), 'Es uno de los mayores desafíos de nuestro tiempo y supone una presión adicional para nuestras sociedades y el medio ambiente. Desde pautas meteorológicas cambiantes, que amenazan la producción de alimentos, hasta el aumento del nivel del mar, que incrementa el riesgo de inundaciones catastróficas, los efectos del cambio climático son de alcance mundial y de una escala sin precedentes.', 'DEM', CURDATE()),#119
+  (null, getIdPregunta('DEM'), 'Se refiere a los ajustes en sistemas humanos o naturales como respuesta a estímulos climáticos proyectados o reales, o sus efectos, que pueden moderar el daño o aprovechar sus aspectos beneficiosos.', 'DEM', CURDATE()),#120
+  (null, getIdPregunta('DEM'), 'Es la acción que consiste en disminuir la intensidad del forzante radiativo con el fin de reducir los efectos potenciales del calentamiento global', 'DEM', CURDATE()),#121
+  (null, getIdPregunta('DEM'), 'Es un procedimiento contemplado en el Protocolo de Kioto en el cual países desarrollados pueden financiar proyectos de mitigación de emisiones de gases de efecto invernadero (GEI) dentro de países en desarrollo.', 'DEM', CURDATE());#122
+
+
+  insert into respuestas(registro, enunciadoRespuesta, idPregunta, correcto, fechaModificacion) values
+    (null, 'Desarrollo', 'DEM00266', 1, CURDATE()),
+    (null, 'Evolución', 'DEM00266', 0, CURDATE()),
+    (null, 'Crecimiento', 'DEM00266', 0, CURDATE()),
+
+    (null, 'Teoria neoclásica', 'DEM00267', 0, CURDATE()),
+    (null, 'Teoria clásica del crecimiento', 'DEM00267', 0, CURDATE()),
+    (null, 'Teoria del crecimiento económico', 'DEM00267', 1, CURDATE()),
+
+    (null, 'Concepción moderna del crecimiento', 'DEM00268', 0, CURDATE()),
+    (null, 'Concepción clásica del crecimiento', 'DEM00268', 1, CURDATE()),
+    (null, 'Concepción  clasica del desarrollo', 'DEM00268', 0, CURDATE()),
+
+    (null, 'El aumento de los factores productivos (más capital y más trabajo) y de la mayor productividad de éstos merced al avance tecnológico', 'DEM00269', 1, CURDATE()),
+    (null, 'La disminucion de los factores productivos y de la menor productividad de éstos merced al avance cultural.', 'DEM00269', 0, CURDATE()),
+    (null, 'La sobreproducción de los factores productivos (más capital y más trabajo) y del aumento de productividad de éstos merced al avance sociocultural.', 'DEM00269', 0, CURDATE()),
+
+    (null, 'Polisémico, Polémico, Histórico, Temporal, Construido temporalmente.', 'DEM00270', 1, CURDATE()),
+    (null, 'Estático, universal, centrado, construido permanentemente.', 'DEM00270', 0, CURDATE()),
+    (null, 'Formal, Dinámico, moderno, Construido a partir de experiencias.', 'DEM00270', 0, CURDATE()),
+
+    (null, 'Economía del desarrollo, economía neoclásica, teoria de la modernización.', 'DEM00271', 0, CURDATE()),
+    (null, 'Teoria Clásica del crecimiento, La nueva teoria del crecimiento economico y El Capital Humano.', 'DEM00271', 1, CURDATE()),
+    (null, 'Estructruralismo, Marxismo, Teoria de la Dependencia.', 'DEM00271', 0, CURDATE()),
+
+    (null, 'Teoria Clásica del crecimiento, La nueva teoria del crecimiento economico y El Capital Humano.', 'DEM00272', 0, CURDATE()),
+    (null, 'Desarrollo humano, Enfoque de las capacidades, Capital social', 'DEM00272', 0, CURDATE()),
+    (null, 'Teoria de la Dependencia, Teoria de la Modernización, teoría del sistema-mundo, teoria de la globalizacion.', 'DEM00272', 1, CURDATE()),
+
+    (null, 'Informe de Desarrollo', 'DEM00273', 0, CURDATE()),
+    (null, 'Informe Brundtland', 'DEM00273', 1, CURDATE()),
+    (null, 'Informe de Desarrollo Sostenible.', 'DEM00273', 0, CURDATE()),
+
+    (null, 'Igualdad, empleabilidad, crecimiento económico.', 'DEM00274', 0, CURDATE()),
+    (null, 'Pobreza , desempleo y desigualdad.', 'DEM00274', 1, CURDATE()),
+    (null, 'Estabilidad laboral, Educación, Igualdad.', 'DEM00274', 0, CURDATE()),
+
+    (null, 'Enfoque de las necesidades básicas, Enfoque Neoliberal.', 'DEM00275', 0, CURDATE()),
+    (null, 'Enfoque del Desarrollo Humano, Enfoque de Desarrolllo Sostenible', 'DEM00275', 0, CURDATE()),
+    (null, 'Modernización y Dependencia.', 'DEM00275', 1, CURDATE()),
+
+    (null, 'Conflicto Este-Oeste, socialismo-capitalismo, más conocido como la “guerra fría”.', 'DEM00276', 1, CURDATE()),
+    (null, 'Primera Guerra Mundial', 'DEM00276', 0, CURDATE()),
+    (null, 'Segunda Guerra Mundial.', 'DEM00276', 0, CURDATE());
+
+  insert into respuestas(registro, enunciadoRespuesta, idPregunta, correcto, fechaModificacion) values
+    (null, 'James Lovelock', 'DEM00277', 0, CURDATE()),
+    (null, 'Alfred Sauvy', 'DEM00277', 1, CURDATE()),
+    (null, 'David Ricardo', 'DEM00277', 0, CURDATE()),
+
+    (null, 'Europa y Oceanía', 'DEM00278', 0, CURDATE()),
+    (null, 'Asia y África', 'DEM00278', 1, CURDATE()),
+    (null, 'América y Oceanía', 'DEM00278', 0, CURDATE()),
+
+    (null, 'Paises que comenzaban a independizarse de las potencias coloniales europeas culminada la Segunda Guerra Mundial.', 'DEM00279', 0, CURDATE()),
+    (null, 'países que han logrado un  alto grado de desarrollo humano (IDH), disfrutan de los más altos estándares de vida posibles, gracias a una buena distribución de la riqueza, sanidad, esperanza de vida y calidad de los servicios', 'DEM00279', 1, CURDATE()),
+    (null, 'como el grupo de países que adhirieron a la llamada experiencia "socialista" (también llamados "socialismo real"), formando una oposición en el plano ideológico al primer mundo. ', 'DEM00279', 0, CURDATE()),
+
+    (null, 'Modernidad, Evolucionismo, Realismo, Dicotismo.', 'DEM00280', 0, CURDATE()),
+    (null, 'Direccional, Acumulativo, Homogenizador, Dualismo.', 'DEM00280', 0, CURDATE()),
+    (null, 'Universalismo, Etnocentrismo, Dicotismo, Evolucionismo.', 'DEM00280', 1, CURDATE()),
+
+    (null, 'Paises Alineados.', 'DEM00281', 0, CURDATE()),
+    (null, 'Paises Socialistas.', 'DEM00281', 0, CURDATE()),
+    (null, 'El Movimiento de Países No Alineados.', 'DEM00281', 1, CURDATE()),
+
+    (null, 'años 60', 'DEM00282', 1, CURDATE()),
+    (null, 'años 70', 'DEM00282', 0, CURDATE()),
+    (null, 'años 90', 'DEM00282', 0, CURDATE()),
+
+    (null, 'Desarrollo Humano.', 'DEM00283', 0, CURDATE()),
+    (null, 'Desarrollo Social.', 'DEM00283', 1, CURDATE()),
+    (null, 'Desarrollo Sostenible.', 'DEM00283', 0, CURDATE()),
+
+    (null, 'Dwight David Eisenhower, 1953', 'DEM00284', 0, CURDATE()),
+    (null, 'Harry Truman, 1949', 'DEM00284', 1, CURDATE()),
+    (null, 'John F. Kennedy, 1962', 'DEM00284', 0, CURDATE()),
+
+    (null, 'Primera Cumbre de la Tierra.', 'DEM00285', 1, CURDATE()),
+    (null, 'Cumbre de las Americas.', 'DEM00285', 0, CURDATE()),
+    (null, 'Cumbre de Paris.', 'DEM00285', 0, CURDATE()),
+
+    (null, 'Cumbre de la Tierra.', 'DEM00286', 1, CURDATE()),
+    (null, 'Conferencia de Bandung.', 'DEM00286', 0, CURDATE()),
+    (null, 'Conferencia de Yalta.', 'DEM00286', 0, CURDATE());
+
+  insert into respuestas(registro, enunciadoRespuesta, idPregunta, correcto, fechaModificacion) values
+    (null, 'Maurice Strong.', 'DEM00287', 1, CURDATE()),
+    (null, 'Thomas R. Malthus.', 'DEM00287', 0, CURDATE()),
+    (null, 'Gro Harlem Brundtland.', 'DEM00287', 0, CURDATE()),
+
+    (null, 'James Lovelock.', 'DEM00288', 0, CURDATE()),
+    (null, 'Thomas Malthus', 'DEM00288', 1, CURDATE()),
+    (null, 'David Ricardo', 'DEM00288', 0, CURDATE()),
+
+    (null, 'Reserva natural.', 'DEM00289', 1, CURDATE()),
+    (null, 'Nicho ecológico.', 'DEM00289', 0, CURDATE()),
+    (null, 'Área Protegida.', 'DEM00289', 0, CURDATE()),
+
+    (null, '“Nuestro presente en común”.', 'DEM00290', 0, CURDATE()),
+    (null, '“Nuestro futuro en común”.', 'DEM00290', 1, CURDATE()),
+    (null, '“Salvemos nuestro planeta”.', 'DEM00290', 0, CURDATE()),
+
+    (null, 'Desarrollo Económico.', 'DEM00291', 0, CURDATE()),
+    (null, 'Desarrollo Humano.', 'DEM00291', 0, CURDATE()),
+    (null, 'Desarrollo Sostenible.', 'DEM00291', 1, CURDATE()),
+
+    (null, 'Económica, Social, Cultural, Electoral.', 'DEM00292', 0, CURDATE()),
+    (null, 'Ecológica, Cultural, Politica, Social.', 'DEM00292', 0, CURDATE()),
+    (null, 'Ecológica, Económica, Social, Institucional y politica.', 'DEM00292', 1, CURDATE()),
+
+    (null, 'Resiliencia de acuerdo a la perspectiva del desarrollo sostenible.', 'DEM00293', 1, CURDATE()),
+    (null, 'Resiliencia de acuerdo a la perspectiva del desarrollo humano.', 'DEM00293', 0, CURDATE()),
+    (null, 'Resiliencia de acuerdo a la perspectiva del desarrollo social.', 'DEM00293', 0, CURDATE()),
+
+    (null, 'Amartya Sen', 'DEM00294', 1, CURDATE()),
+    (null, 'Amartya Kumar  Sen', 'DEM00294', 0, CURDATE()),
+    (null, 'Rafael Calduch', 'DEM00294', 0, CURDATE()),
+
+    (null, 'Desarrollo Sostenible', 'DEM00295', 0, CURDATE()),
+    (null, 'Desarrollo Humano', 'DEM00295', 1, CURDATE()),
+    (null, 'Desarrollo Social ', 'DEM00295', 0, CURDATE()),
+
+    (null, 'Producto Nacional Bruto (PNB) per cápita.', 'DEM00296', 1, CURDATE()),
+    (null, 'Producto Interno Bruto ( PIB).', 'DEM00296', 0, CURDATE()),
+    (null, 'Renta per cápita.', 'DEM00296', 1, CURDATE()),
+
+    (null, 'PNB', 'DEM00297', 0, CURDATE()),
+    (null, 'PIB', 'DEM00297', 0, CURDATE()),
+    (null, 'IDH', 'DEM00297', 1, CURDATE());
+
+  insert into respuestas(registro, enunciadoRespuesta, idPregunta, correcto, fechaModificacion) values
+    (null, 'Producto Interno Bruto (PIB)', 'DEM00298', 0, CURDATE()),
+    (null, 'Producto Nacional Bruto per cápita (PNB)', 'DEM00298', 0, CURDATE()),
+    (null, 'Índice de Desarrollo Humano', 'DEM00298', 1, CURDATE()),
+
+    (null, 'Esperanza de vida al nacer, nivel de culturalidad, la tasa de reducción de deserción escolar, tasa de empleabilidad y desempleo en términos de poder adiquisitivo.', 'DEM00299', 0, CURDATE()),
+    (null, 'Nivel de educación, reducción de mortalidad, la tasa de desempleo, nivel de adquisición. ', 'DEM00299', 0, CURDATE()),
+    (null, 'La esperanza de vida al nacer, La tasa de alfabetización adulta, La tasa de matriculación combinada en educación primaria, secundaria y terciaria. Y la renta real medida en términos de paridad de poder adquisitivo', 'DEM00299', 1, CURDATE()),
+
+    (null, 'Comercial', 'DEM00300', 0, CURDATE()),
+    (null, 'Adquisitivo', 'DEM00300', 1, CURDATE()),
+    (null, 'Acumulativo', 'DEM00300', 0, CURDATE()),
+
+    (null, 'La perspectiva de género', 'DEM00301', 1, CURDATE()),
+    (null, 'La perspectiva social', 'DEM00301', 0, CURDATE()),
+    (null, 'perspectiva política', 'DEM00301', 0, CURDATE()),
+
+    (null, '1960', 'DEM00302', 0, CURDATE()),
+    (null, '1980', 'DEM00302', 0, CURDATE()),
+    (null, '1990', 'DEM00302', 1, CURDATE()),
+
+    (null, 'Población', 'DEM00303', 0, CURDATE()),
+    (null, 'Ciudadania', 'DEM00303', 1, CURDATE()),
+    (null, 'Sociedad', 'DEM00303', 0, CURDATE()),
+
+    (null, 'Democracia social', 'DEM00304', 0, CURDATE()),
+    (null, 'Democracia de género', 'DEM00304', 1, CURDATE()),
+    (null, 'Democracia politica', 'DEM00304', 0, CURDATE()),
+
+    (null, 'Igualdad de género', 'DEM00305', 1, CURDATE()),
+    (null, 'Equidad de género', 'DEM00305', 0, CURDATE()),
+    (null, 'Igualdad Cultural', 'DEM00305', 0, CURDATE()),
+
+    (null, 'Justicia', 'DEM00306', 0, CURDATE()),
+    (null, 'Igualdad social', 'DEM00306', 0, CURDATE()),
+    (null, 'Equidad de género', 'DEM00306', 1, CURDATE()),
+
+    (null, 'Sexo', 'DEM00307', 0, CURDATE()),
+    (null, 'Justicia', 'DEM00307', 0, CURDATE()),
+    (null, 'Género', 'DEM00307', 1, CURDATE()),
+
+    (null, 'Sexo', 'DEM00308', 1, CURDATE()),
+    (null, 'Género', 'DEM00308', 0, CURDATE()),
+    (null, 'Sexualidad', 'DEM00308', 0, CURDATE()),
+
+    (null, 'Género', 'DEM00309', 1, CURDATE()),
+    (null, 'Sexo', 'DEM00309', 0, CURDATE()),
+    (null, 'Sexualidad', 'DEM00309', 0, CURDATE());
+
+  insert into respuestas(registro, enunciadoRespuesta, idPregunta, correcto, fechaModificacion) values
+    (null, 'Desigualdades entre hombres y mujeres', 'DEM00310', 1, CURDATE()),
+    (null, 'Igualdad entre hombres y mujeres', 'DEM00310', 0, CURDATE()),
+    (null, 'Desigualdades entre hombre y hombre', 'DEM00310', 0, CURDATE()),
+
+    (null, 'Patrialcado', 'DEM00311', 0, CURDATE()),
+    (null, 'Modelo social androcéntrico (androcentrismo)', 'DEM00311', 1, CURDATE()),
+    (null, 'Matrialcado', 'DEM00311', 0, CURDATE()),
+
+    (null, '• La existencia de jerarquía de poder y de relaciones de dominio entre mujeres y hombres. • La existencia de un sistema social perfectamente estructurado que genera desigualdades y perpetúa un sistema de relaciones desiguales a través de diferentes mecanismos', 'DEM00312', 0, CURDATE()),
+    (null, '• La existencia de igualdad y de relaciones de poder entre hombres y mujeres. • La existencia de un sistema social complejo perfectamente estructurado que genera asimetrías y perpetúa un sistema de relaciones iguales a través de diferentes mecanismos', 'DEM00312', 0, CURDATE()),
+    (null, '• La existencia de jerarquía y de relaciones de poder entre hombres y mujeres. • La existencia de un sistema social complejo perfectamente estructurado que genera asimetrías y perpetúa un sistema de relaciones desiguales a través de diferentes mecanismos', 'DEM00312', 1, CURDATE()),
+
+    (null, 'Femenismo', 'DEM00313', 0, CURDATE()),
+    (null, 'Machismo', 'DEM00313', 0, CURDATE()),
+    (null, 'Andocentrismo', 'DEM00313', 1, CURDATE()),
+
+    (null, 'Hombres= reproducción, Mujeres= producción', 'DEM00314', 0, CURDATE()),
+    (null, 'Hombres= producción, Mujeres=reproducción.', 'DEM00314', 1, CURDATE()),
+    (null, 'Igualitarias', 'DEM00314', 0, CURDATE()),
+
+    (null, 'Homicidio', 'DEM00315', 0, CURDATE()),
+    (null, 'Mortalidad', 'DEM00315', 0, CURDATE()),
+    (null, 'Feminicidio', 'DEM00315', 1, CURDATE()),
+
+    (null, '1979', 'DEM00316', 1, CURDATE()),
+    (null, '1989', 'DEM00316', 0, CURDATE()),
+    (null, '1999', 'DEM00316', 0, CURDATE()),
+
+    (null, 'Convención sobre la Eliminación de todas las Formas de Discriminación contra la Mujer (CEDAW).', 'DEM00317', 1, CURDATE()),
+    (null, 'Convención sobre la Eliminación de todas las formas de Discriminación contra el Hombre.', 'DEM00317', 0, CURDATE()),
+    (null, 'Convención sobre la Eliminación sobre desigualdad contra la Mujer.', 'DEM00317', 0, CURDATE()),
+
+    (null, 'Primer Conferencia Nacional sobre la Mujer.', 'DEM00318', 0, CURDATE()),
+    (null, 'La cuarta Conferencia Mundial sobre la Mujer.', 'DEM00318', 1, CURDATE()),
+    (null, 'Tercera Conferencia Internacional sobre la Mujer.', 'DEM00318', 0, CURDATE()),
+
+    (null, 'Beijing 1995', 'DEM00319', 0, CURDATE()),
+    (null, 'Copenhague 1980', 'DEM00319', 0, CURDATE()),
+    (null, 'México 1975', 'DEM00319', 1, CURDATE()),
+
+    (null, 'Conferencia de Narobi y Río de Janeiro', 'DEM00320', 0, CURDATE()),
+    (null, 'Conferencia de Viena y El Cairo', 'DEM00320', 1, CURDATE()),
+    (null, 'Conferencia de Paris y Monterrey', 'DEM00320', 0, CURDATE());
+
+  insert into respuestas(registro, enunciadoRespuesta, idPregunta, correcto, fechaModificacion) values
+    (null, 'Plataforma de Acción de Beijing', 'DEM00321', 1, CURDATE()),
+    (null, 'Plataforma de Acción de Río de Janeiro', 'DEM00321', 0, CURDATE()),
+    (null, 'Plataforma de Acción de Barranquilla.', 'DEM00321', 0, CURDATE()),
+
+    (null, 'Igualdad', 'DEM00322', 0, CURDATE()),
+    (null, 'Paridad', 'DEM00322', 1, CURDATE()),
+    (null, 'Desigualdad', 'DEM00322', 0, CURDATE()),
+
+    (null, 'índice de potenciación de género (IPG)', 'DEM00323', 0, CURDATE()),
+    (null, 'índice de desarrollo humano relativo al género (IDG)', 'DEM00323', 1, CURDATE()),
+    (null, 'Índice de Desigualdad de Género', 'DEM00323', 0, CURDATE()),
+
+    (null, 'Objetivos de Desarrollo Sostenible (ODS)', 'DEM00324', 1, CURDATE()),
+    (null, 'Objetivos del Milenio (ODM)', 'DEM00324', 0, CURDATE()),
+    (null, 'Objetivos de Desarrollo Humano', 'DEM00324', 0, CURDATE()),
+
+    (null, 'Cultura en valores', 'DEM00325', 0, CURDATE()),
+    (null, 'Cultura politica', 'DEM00325', 0, CURDATE()),
+    (null, 'Cultura organizacional', 'DEM00325', 1, CURDATE()),
+
+    (null, 'Son los Planes y acciones.', 'DEM00326', 0, CURDATE()),
+    (null, 'Son las Politicas y  Planes', 'DEM00326', 0, CURDATE()),
+    (null, 'Son los proyectos y programas de desarrollo', 'DEM00326', 1, CURDATE()),
+
+    (null, 'Desarrollo en Mujeres  y Desarrollo en el género', 'DEM00327', 0, CURDATE()),
+    (null, 'Mujeres en el Desarrollo (MED) y Género en el Desarrollo (GED)', 'DEM00327', 1, CURDATE()),
+    (null, 'Desarrollo del Género y Desarrollo de las mujeres.', 'DEM00327', 0, CURDATE()),
+
+    (null, 'Empoderamiento de la juventud.', 'DEM00328', 0, CURDATE()),
+    (null, 'Empoderamiento del hombre.', 'DEM00328', 0, CURDATE()),
+    (null, 'Empoderamiento de mujeres.', 'DEM00328', 1, CURDATE()),
+
+    (null, 'Enfque de empoderamiento', 'DEM00329', 0, CURDATE()),
+    (null, 'Estrategia de  mainstreaming de género', 'DEM00329', 1, CURDATE()),
+    (null, 'Estraetegia de Bienestar', 'DEM00329', 0, CURDATE()),
+
+    (null, 'Agenda 2030', 'DEM00330', 1, CURDATE()),
+    (null, 'Agenda 2015', 'DEM00330', 0, CURDATE()),
+    (null, 'Agenda 2050', 'DEM00330', 0, CURDATE()),
+
+    (null, '25 de septiembre, 2015', 'DEM00331', 1, CURDATE()),
+    (null, '22 de abril 2016', 'DEM00331', 0, CURDATE()),
+    (null, '11 de diciembre de 2015', 'DEM00331', 0, CURDATE()),
+
+    (null, 'Fuerzas reales', 'DEM00332', 0, CURDATE()),
+    (null, 'Fuerzas Politicas', 'DEM00332', 0, CURDATE()),
+    (null, 'Fuerzas Motrices', 'DEM00332', 1, CURDATE()),
+
+    (null, 'Desarrollo Politico', 'DEM00333', 0, CURDATE()),
+    (null, 'Desarrollo Social', 'DEM00333', 0, CURDATE()),
+    (null, 'Desarrollo Económico', 'DEM00333', 1, CURDATE());
+
+  insert into respuestas(registro, enunciadoRespuesta, idPregunta, correcto, fechaModificacion) values
+    (null, 'Libertad de expresión', 'DEM00334', 0, CURDATE()),
+    (null, 'La educación', 'DEM00334', 1, CURDATE()),
+    (null, 'Seguridad', 'DEM00334', 0, CURDATE()),
+
+    (null, 'Urbanización', 'DEM00335', 0, CURDATE()),
+    (null, 'Migración', 'DEM00335', 1, CURDATE()),
+    (null, 'Población', 'DEM00335', 0, CURDATE()),
+
+    (null, '1 de enero 2016', 'DEM00336', 1, CURDATE()),
+    (null, '22 de septiembre 2015', 'DEM00336', 0, CURDATE()),
+    (null, '30 de julio 2016', 'DEM00336', 0, CURDATE()),
+
+    (null, 'Conferencia de Paris', 'DEM00337', 0, CURDATE()),
+    (null, 'Conferencia de Narobi', 'DEM00337', 0, CURDATE()),
+    (null, 'Conferencia de Estocolmo', 'DEM00337', 1, CURDATE()),
+
+    (null, 'Conferencia de Río', 'DEM00338', 0, CURDATE()),
+    (null, 'Conferencia de París', 'DEM00338', 0, CURDATE()),
+    (null, 'Conferencia de Narobi', 'DEM00338', 1, CURDATE()),
+
+    (null, '28 de octubre de 1983', 'DEM00339', 0, CURDATE()),
+    (null, '28 de octubre de 1982', 'DEM00339', 1, CURDATE()),
+    (null, '30 de Julio de 1984', 'DEM00339', 0, CURDATE()),
+
+    (null, 'Protocolo de Monterrey', 'DEM00340', 0, CURDATE()),
+    (null, 'Protocolo de Montreal', 'DEM00340', 1, CURDATE()),
+    (null, 'Protocolo de Kioto', 'DEM00340', 0, CURDATE()),
+
+    (null, 'Carta de las Naciones Unidas y sus 4 principios', 'DEM00341', 0, CURDATE()),
+    (null, 'Carta de la naturaleza y sus 30 principios', 'DEM00341', 0, CURDATE()),
+    (null, 'Carta de la Tierra y sus 27 principios', 'DEM00341', 1, CURDATE()),
+
+    (null, 'Declaración del Milenio y ODM', 'DEM00342', 1, CURDATE()),
+    (null, 'Declaracion del Medio Ambiente', 'DEM00342', 0, CURDATE()),
+    (null, 'Declaración de ODS', 'DEM00342', 0, CURDATE()),
+
+    (null, 'Consenso de Monterrey (2002)', 'DEM00343', 1, CURDATE()),
+    (null, 'Cumbre de Johannesburgo o Río+10 (2002)', 'DEM00343', 0, CURDATE()),
+    (null, 'Conferencia de Río', 'DEM00343', 0, CURDATE());
+
+  insert into respuestas(registro, enunciadoRespuesta, idPregunta, correcto, fechaModificacion) values
+    (null, 'Protocolo de Paris', 'DEM00344', 0, CURDATE()),
+    (null, 'Protocolo de Kioto', 'DEM00344', 1, CURDATE()),
+    (null, 'Protocolo de Montreal', 'DEM00344', 0, CURDATE()),
+
+    (null, 'Consenso de Monterrey (2002).', 'DEM00345', 0, CURDATE()),
+    (null, 'Conferencia de Narobi.', 'DEM00345', 0, CURDATE()),
+    (null, 'Cumbre de Johannesburgo o Río+10 (2002).', 'DEM00345', 1, CURDATE()),
+
+    (null, 'Acuerdo de Paris.', 'DEM00346', 1, CURDATE()),
+    (null, 'Acuerdo de Ginebra.', 'DEM00346', 0, CURDATE()),
+    (null, 'Acuerdo de Varsovia', 'DEM00346', 0, CURDATE()),
+
+    (null, 'Conferencia de los Estados', 'DEM00347', 0, CURDATE()),
+    (null, 'Las Conferencias de las Partes (COP)', 'DEM00347', 1, CURDATE()),
+    (null, 'Conferencia de las Naciones', 'DEM00347', 0, CURDATE()),
+
+    (null, 'Ginebra 1996', 'DEM00348', 0, CURDATE()),
+    (null, 'Kioto 1997', 'DEM00348', 0, CURDATE()),
+    (null, 'Berlín 1995', 'DEM00348', 1, CURDATE()),
+
+    (null, 'Marzo 2005', 'DEM00349', 0, CURDATE()),
+    (null, 'Febrero 2005', 'DEM00349', 1, CURDATE()),
+    (null, 'Julio 2005', 'DEM00349', 0, CURDATE()),
+
+    (null, 'El principal objetivo de la COP 22', 'DEM00350', 1, CURDATE()),
+    (null, 'El principal objetivo de la COP 5', 'DEM00350', 0, CURDATE()),
+    (null, 'El principal objetivo de la COP 21', 'DEM00350', 0, CURDATE()),
+
+    (null, 'Tugurio', 'DEM00351', 1, CURDATE()),
+    (null, 'Vivienda', 'DEM00351', 0, CURDATE()),
+    (null, 'Hogar', 'DEM00351', 0, CURDATE()),
+
+    (null, 'Las políticas de igualdad', 'DEM00352', 0, CURDATE()),
+    (null, 'Las políticas pro-inclusión', 'DEM00352', 1, CURDATE()),
+    (null, 'Las políticas de reducción de desigualdad', 'DEM00352', 0, CURDATE()),
+
+    (null, 'Igualdad', 'DEM00353', 0, CURDATE()),
+    (null, 'Exclusión', 'DEM00353', 0, CURDATE()),
+    (null, 'Inlcuisión', 'DEM00353', 1, CURDATE());
+
+  insert into respuestas(registro, enunciadoRespuesta, idPregunta, correcto, fechaModificacion) values
+    (null, 'Exclusión', 'DEM00354', 1, CURDATE()),
+    (null, 'Inclusión', 'DEM00354', 0, CURDATE()),
+    (null, 'Igualdad', 'DEM00354', 0, CURDATE()),
+
+    (null, 'La agenda pro-inclusión', 'DEM00355', 1, CURDATE()),
+    (null, 'Agenda 2030', 'DEM00355', 0, CURDATE()),
+    (null, 'Agenda pro-exclusión', 'DEM00355', 0, CURDATE()),
+
+    (null, 'Noviembre 1992', 'DEM00356', 0, CURDATE()),
+    (null, 'Octubre 1992', 'DEM00356', 1, CURDATE()),
+    (null, 'Diciembre 1992', 'DEM00356', 0, CURDATE()),
+
+    (null, 'Fondo para la conservación de la naturaleza', 'DEM00357', 0, CURDATE()),
+    (null, 'Fondo para el Medio Ambiente Mundial', 'DEM00357', 1, CURDATE()),
+    (null, 'Fondo Mundial para el Medio Ambiente', 'DEM00357', 0, CURDATE()),
+
+    (null, 'a) por medio de la captura de CO2 a través de actividades de hidrataciòn, reforestación o instauración. b) manteniendo el carbono que tienen almacenado dentro de su biomasa, y c) por medio de la sustitución de combustibles fósiles por productos forestales para la generación eléctrica', 'DEM00358', 0, CURDATE()),
+    (null, 'a) por medio de la captura de CO2 a través de actividades de deforestación, reforestación o restauración b) manteniendo el carbono que tienen almacenado dentro de su biomasa, y c) por medio de la sustitución de combustibles fósiles por productos forestales para la generación hidro eléctrica', 'DEM00358', 0, CURDATE()),
+    (null, 'a) por medio de la captura de CO2 a través de actividades de forestación, reforestación o restauración. 2) manteniendo el carbono que tienen almacenado dentro de su biomasa, y 3) por medio de la sustitución de combustibles fósiles por productos forestales para la generación eléctrica', 'DEM00358', 1, CURDATE()),
+
+    (null, 'Estrategias de reducción de emisiones por deforestación y degradación forestal', 'DEM00359', 1, CURDATE()),
+    (null, 'estrategias de incrementación de emisiones por deforestación y degradación forestal', 'DEM00359', 0, CURDATE()),
+    (null, 'Estratregias de reducción de emisiones por contaminación  y degradacción forestal', 'DEM00359', 0, CURDATE()),
+
+    (null, 'Aumento de la Deforestación, Aumento de la Degradación, Conservación, Manejo Sostenible de los Bosques, Disminución de los stocks forestales de carbono', 'DEM00360', 0, CURDATE()),
+    (null, 'Reducción de la Deforestación, Reducción de la Degradación, Conservación,Manejo Sostenible de los Bosques,Aumento de los stocks forestales de carbono', 'DEM00360', 1, CURDATE()),
+    (null, 'Deduccioón de la Deforestación, ampliación de la Degradación, Aniquilación, Manejo Sostenible de los Bosques, Reducción de los stocks forestales de carbono', 'DEM00360', 0, CURDATE()),
+
+    (null, 'Establecer órganos o instancias especificas que coordinen el desarrollo urbano de los territories que component a un país o región. Y consolidar una nueva nueva gobernanza urbana en América y el Caribe reconocimiento a la necesidad de implementar soluciones locales y urbanas.', 'DEM00361', 0, CURDATE()),
+    (null, 'Aumentar el ingreso de gobiernos subnacionales, permitiendo su previsibilidad y mayor autonomía respect de las instancias centrales', 'DEM00361', 0, CURDATE()),
+    (null, '“a” y “b” son correctas', 'DEM00361', 1, CURDATE()),
+
+    (null, 'Fortalecer el enfoque multiactor de la agenda, generando incentivos para ampliar la participación de la empresa privada.', 'DEM00362', 0, CURDATE()),
+    (null, 'Elimar el sesgo regresivo de los sistemas tributaries, así como también evitar la evasion y elusion fiscal.', 'DEM00362', 1, CURDATE()),
+    (null, 'Fomentar la austeridad en la administración pública, promoviendo el combante de la corrupción.', 'DEM00362', 0, CURDATE()),
+
+    (null, 'Mexclar y combinar finanzas', 'DEM00363', 0, CURDATE()),
+    (null, 'Catalizar finanzas privadas', 'DEM00363', 0, CURDATE()),
+    (null, 'Evaluación base e identificación de necesidades y prioridades.', 'DEM00363', 1, CURDATE());
+
+  insert into respuestas(registro, enunciadoRespuesta, idPregunta, correcto, fechaModificacion) values
+    (null, 'Implica que las PP se discutan, diseñen, implementen y evaluen con participación de otros actores más alla del gobierno.', 'DEM00364', 1, CURDATE()),
+    (null, 'Consiste en las acciones puntuales de un proceso polítoc y social que su objetivo es resolver un problema público que tiene que ser coherente,', 'DEM00364', 0, CURDATE()),
+    (null, '“a” y “b” son incorrectas', 'DEM00364', 0, CURDATE()),
+
+    (null, 'Recursos, Valores, Opinión Pública', 'DEM00365', 1, CURDATE()),
+    (null, 'Tiempo, grupos de presión, recursos', 'DEM00365', 0, CURDATE()),
+    (null, 'Inclusion, exclusión, experticia.', 'DEM00365', 0, CURDATE()),
+
+    (null, 'Plan', 'DEM00366', 0, CURDATE()),
+    (null, 'Política', 'DEM00366', 1, CURDATE()),
+    (null, 'Proyecto', 'DEM00366', 0, CURDATE()),
+
+    (null, 'Plan', 'DEM00367', 0, CURDATE()),
+    (null, 'Proyecto', 'DEM00367', 0, CURDATE()),
+    (null, 'Política Pública', 'DEM00367', 1, CURDATE()),
+
+    (null, 'Plan', 'DEM00368', 1, CURDATE()),
+    (null, 'Proyecto', 'DEM00368', 0, CURDATE()),
+    (null, 'Acciones', 'DEM00368', 0, CURDATE()),
+
+    (null, 'Acciones', 'DEM00369', 0, CURDATE()),
+    (null, 'Programa', 'DEM00369', 1, CURDATE()),
+    (null, 'Proyectos', 'DEM00369', 0, CURDATE()),
+
+    (null, 'Proyectos', 'DEM00370', 1, CURDATE()),
+    (null, 'Acciones', 'DEM00370', 0, CURDATE()),
+    (null, 'Política', 'DEM00370', 0, CURDATE()),
+
+    (null, 'Ciclo de vida de un Proyecto', 'DEM00371', 0, CURDATE()),
+    (null, 'Ciclo de las Acciones Públicas', 'DEM00371', 0, CURDATE()),
+    (null, 'Ciclo de las Políticas Públicas', 'DEM00371', 1, CURDATE()),
+
+    (null, 'Recursos, Actores e instituciones', 'DEM00372', 1, CURDATE()),
+    (null, 'Opinión Publica, Agenda Internacional, recursos', 'DEM00372', 0, CURDATE()),
+    (null, '“a” y “b” son correctas', 'DEM00372', 0, CURDATE()),
+
+    (null, 'Análisis y decisión de acciones', 'DEM00373', 0, CURDATE()),
+    (null, 'Diseño', 'DEM00373', 1, CURDATE()),
+    (null, 'Incorporación en  la Agenda', 'DEM00373', 0, CURDATE()),
+
+    (null, 'Evaluación', 'DEM00374', 1, CURDATE()),
+    (null, 'Diseño', 'DEM00374', 0, CURDATE()),
+    (null, 'Implementación', 'DEM00374', 0, CURDATE()),
+
+    (null, 'Gobernabilidad en Políticas Públicas', 'DEM00375', 0, CURDATE()),
+    (null, 'Gobernar en Políticas Públicas', 'DEM00375', 0, CURDATE()),
+    (null, 'Gobernanza en Políticas Públicas', 'DEM00375', 1, CURDATE());
+
+  insert into respuestas(registro, enunciadoRespuesta, idPregunta, correcto, fechaModificacion) values
+    (null, 'Políticas Públicas, Racionalidad', 'DEM00376', 1, CURDATE()),
+    (null, 'Gestión pública,  Eficiencia', 'DEM00376', 0, CURDATE()),
+    (null, 'Gobernanza, Colaboración entre actores', 'DEM00376', 0, CURDATE()),
+
+    (null, 'Políticas Públicas, Racionalidad', 'DEM00377', 0, CURDATE()),
+    (null, 'Gobernanza, Colaboración entre actores', 'DEM00377', 0, CURDATE()),
+    (null, 'Gestión pública,  Eficiencia', 'DEM00377', 1, CURDATE()),
+
+    (null, 'Gobernanza, Colaboración entre actores', 'DEM00378', 1, CURDATE()),
+    (null, 'Tratado para la Prohibición de armas', 'DEM00378', 0, CURDATE()),
+    (null, 'Gestión pública,  Eficiencia', 'DEM00378', 0, CURDATE()),
+
+    (null, 'Diseño', 'DEM00379', 0, CURDATE()),
+    (null, 'Definición del problema', 'DEM00379', 1, CURDATE()),
+    (null, 'Evaluación', 'DEM00379', 0, CURDATE()),
+
+    (null, 'Instituciones gubernamentales, Agenda internacional, Opinión pública.', 'DEM00380', 1, CURDATE()),
+    (null, 'Instituciones regionals, Agenda nacional y Opinión Pública.', 'DEM00380', 0, CURDATE()),
+    (null, '“a” y “b” son incorrectas', 'DEM00380', 0, CURDATE()),
+
+    (null, 'Orientación práctivas hacia la resolución de problemas y compromise cultural.', 'DEM00381', 0, CURDATE()),
+    (null, 'Compromiso ético y orientación práctica hacia la resolución de problemas estructurales de la humanidad.', 'DEM00381', 1, CURDATE()),
+    (null, 'Compromiso social y orientación teórica hacia la resolución de problemas estructurales de la humanidad.', 'DEM00381', 0, CURDATE()),
+
+    (null, 'Agenda común de Desarrollo (ODM)', 'DEM00382', 1, CURDATE()),
+    (null, 'Agenda común de la Humanidad', 'DEM00382', 0, CURDATE()),
+    (null, 'Agenda común del Medio Ambiente', 'DEM00382', 0, CURDATE()),
+
+    (null, 'Calentamiento global', 'DEM00383', 1, CURDATE()),
+    (null, 'Cambio climático', 'DEM00383', 0, CURDATE()),
+    (null, 'Agenda común del Medio Ambiente', 'DEM00383', 0, CURDATE()),
+
+    (null, 'Efecto invernadero', 'DEM00384', 0, CURDATE()),
+    (null, 'Calentamiento global', 'DEM00384', 0, CURDATE()),
+    (null, 'Cambio climático', 'DEM00384', 1, CURDATE()),
+
+    (null, 'Mitigación al cambio climático', 'DEM00385', 0, CURDATE()),
+    (null, 'Adaptación al cambio climático', 'DEM00385', 1, CURDATE()),
+    (null, '“a” y “b” son correctas', 'DEM00385', 0, CURDATE());
+
+  insert into respuestas(registro, enunciadoRespuesta, idPregunta, correcto, fechaModificacion) values
+    (null, 'Adapatación al cambio climático', 'DEM00386', 0, CURDATE()),
+    (null, 'Mitigación al cambio climático', 'DEM00386', 1, CURDATE()),
+    (null, '“a” y “b” son incorrectas', 'DEM00386', 0, CURDATE()),
+
+    (null, 'Mecanismo de Desarrollo Productivo', 'DEM00387', 0, CURDATE()),
+    (null, 'Mecanismo de Desarrollo Lineal', 'DEM00387', 0, CURDATE()),
+    (null, 'Mecanismo de Desarrollo Limpio', 'DEM00387', 1, CURDATE());

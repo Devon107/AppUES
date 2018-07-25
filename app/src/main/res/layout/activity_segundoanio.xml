@@ -16,7 +16,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/tab_element"/>
         <Button
-            android:id="@+id/materia11"
+            android:id="@+id/DEM"
             android:layout_width="wrap_content"
             android:layout_height="24dp"
             android:layout_gravity="center_horizontal"
